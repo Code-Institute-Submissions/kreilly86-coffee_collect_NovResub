@@ -1,0 +1,24 @@
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 15px;
+    text-align: center;
+}
+
+#hero-image {
+    width: 100vw;
+    margin-bottom: 15px;
+    overflow: hidden;
+    opacity: 50%; 
+}
+
+
+.card {
+    padding: 25px;
+}
+
+.card-group {
+    width: 75vw;
+    margin-left: 10em;
+}
