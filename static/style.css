@@ -10,9 +10,15 @@ body {
     overflow-wrap: hidden;
     font-family: 'Noto sans', sans-serif;
     font-weight: 400;
-    background-color: 66999B;
+    background-color: white;
+    overflow-x: hidden;
 }
 
+#hero-image {
+    width: 100vw;
+    margin-bottom: 15px;
+    opacity: 70%; 
+}
 
 h1 {
     font-family: 'Fjalla One', sans-serif;
@@ -39,6 +45,10 @@ h2 {
     margin-right: 1.5rem;
 }
 
+.sign-in {
+    color: 2B3A67;
+}
+
 .card {
     padding: 20px;
     border-color: 9BA0A3;
@@ -54,6 +64,7 @@ h2 {
     font-size: 1.25rem;
 }
 
+
 .collecting {
     display: flex;
     align-items: center;
@@ -66,7 +77,7 @@ h2 {
 
 .coffee-chain {
     justify-content: center;
-    background-color: white;
+    background-color: #B8BFA8;
 }
 
 .carousel-inner {
@@ -75,12 +86,12 @@ h2 {
 }
 
 .carousel-caption {
-    color: 2B3A67;
+    color: white;
     font-size: 1.5rem;
 }
 
 .carousel-caption h3 {
-    color: 2B3A67;
+    color: #A2412E;
     font-family: 'Fjalla One', sans-serif;
 }
 
@@ -90,7 +101,7 @@ h2 {
 }
 
 footer {
-    background-color: 66999B;
+    background-color: white;
     height: 200px;
     width: 100%;
     display: flex;
@@ -98,7 +109,8 @@ footer {
 }
 
 .contact {
-    color: 2B3A67;
+    color: black;
+    font-size: 1.25rem;
     display: flex;
     padding: 10px;
     margin: 20px;
