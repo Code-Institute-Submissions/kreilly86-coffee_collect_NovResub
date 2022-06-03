@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto sans', sans-serif;
+    margin: 0; 
+    padding: 0;
+}
+
 h1 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 40px;
@@ -11,15 +18,11 @@ h1 {
     width: 100vw;
     margin-bottom: 15px;
     opacity: 50%; 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
 }
 
 .card {
     padding: 20px;
-    border-color: FFC482;
+    border-color: 9BA0A3;
     border-width: 1px;
     margin: 65px;
     border-style: solid;
@@ -42,4 +45,41 @@ body {
     overflow-x: hidden;
     font-family: 'Noto sans', sans-serif;
     font-weight: 400;
+    background-color: 66999B;
 }
+
+.container {
+    flex:1;
+}
+
+footer {
+    background-color: white;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact {
+    color: 2B3A67;
+    display: flex;
+    padding: 10px;
+    margin: 20px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline-flex;
+    margin-top: 25%; 
+}
+
+.social-links i {
+    font-size: 1.75rem;
+    color: 2B3A67;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
