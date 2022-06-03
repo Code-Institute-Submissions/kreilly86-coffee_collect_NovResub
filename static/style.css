@@ -13,7 +13,6 @@ h1 {
     opacity: 50%; 
 }
 
-
 .card {
     padding: 25px;
 }
@@ -21,4 +20,8 @@ h1 {
 .card-group {
     width: 75vw;
     margin-left: 10em;
+}
+
+body {
+    background-color: 66999B;
 }
