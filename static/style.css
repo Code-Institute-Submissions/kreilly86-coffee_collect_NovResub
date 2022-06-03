@@ -20,9 +20,24 @@ h1 {
     font-weight: 400;
     padding: 10px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 50px;
 }
 
+h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.navbar li {
+   font-size: 1.3em;
+}
+
+.navbar i {
+    font-size: 1.7rem;
+    color: 2B3A67;
+    margin-right: 1.5rem;
+}
 
 .card {
     padding: 20px;
@@ -36,6 +51,7 @@ h1 {
 
 .card-text {
     color: 2B3A67;
+    font-size: 1.25rem;
 }
 
 .collecting {
@@ -48,8 +64,33 @@ h1 {
     flex:1;
 }
 
-footer {
+.coffee-chain {
+    justify-content: center;
     background-color: white;
+}
+
+.carousel-inner {
+    width: 75vw; 
+    justify-content: center;
+}
+
+.carousel-caption {
+    color: 2B3A67;
+    font-size: 1.5rem;
+}
+
+.carousel-caption h3 {
+    color: 2B3A67;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+.big-icon img {
+    transform: scale(0.2);
+}
+
+footer {
+    background-color: 66999B;
     height: 200px;
     width: 100%;
     display: flex;
