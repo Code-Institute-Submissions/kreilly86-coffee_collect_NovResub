@@ -2,26 +2,44 @@ h1 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 40px;
     font-weight: 400;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
+    margin-top: 15px;
 }
 
 #hero-image {
     width: 100vw;
     margin-bottom: 15px;
-    overflow: hidden;
     opacity: 50%; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 .card {
-    padding: 25px;
+    padding: 20px;
+    border-color: FFC482;
+    border-width: 1px;
+    margin: 65px;
+    border-style: solid;
+    width: 20vw;
+    display: inline-flex;
 }
 
-.card-group {
-    width: 75vw;
-    margin-left: 10em;
+.card-text {
+    color: 2B3A67;
+}
+
+.collecting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 body {
-    background-color: 66999B;
+    background-color: white;
+    overflow-x: hidden;
+    font-family: 'Noto sans', sans-serif;
+    font-weight: 400;
 }
