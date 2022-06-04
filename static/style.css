@@ -19,6 +19,15 @@ body {
     margin: 0;
 }
 
+#about-image {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
 
 h1 {
     font-family: 'Fjalla One', sans-serif;
@@ -53,7 +62,7 @@ h2 {
     padding: 20px;
     border-color: #B3AF8F;
     border-width: 2px;
-    margin: 20px;
+    margin: 30px;
     border-style: solid;
 }
 
@@ -65,6 +74,7 @@ h2 {
 .coffee-chain {
     justify-content: center;
     background-color: #B8BFA8;
+    width: 100vw;
 }
 
 .carousel-inner {
@@ -85,7 +95,13 @@ h2 {
 
 .big-icon img {
     transform: scale(0.2);
-    justify-content: center;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
 }
 
 footer {
@@ -124,11 +140,29 @@ footer {
         width: 80vw;
     }
 
+    #hero-image {
+        width: 100vw;
+    }
+
     .card-text {
-        font-size: 1rem;
+        font-size: small;
+    }
+
+    .big-icon {
+        transform: scale(0.5);
+        padding: 10px;
+    }
+
+    .carousel-caption {
+        text-align: left;
     }
 
     .carousel-inner {
-        width: 100vw;
+        width: fit-content;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: row;
     }
 }
