@@ -121,6 +121,10 @@ h2 {
     transform: scale(0.2);
 }
 
+.coffees {
+    margin-bottom: 25px;
+}
+
 .about-us {
     display: flex;
     flex-direction: column;
