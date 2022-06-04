@@ -67,6 +67,8 @@ h2 {
     font-family: 'Fjalla One', sans-serif;
     font-weight: 300;
     padding: 10px;
+    text-align: center;
+    
 }
 
 .navbar li {
@@ -146,12 +148,12 @@ h2 {
 }
 
 .join-button {
-    background-color: #66999B;
+    background-color: #2B3A67;
     border-color: #B3AF8F;
 }
 
 .join-button:hover {
-    background-color: #2B3A67;
+    background-color: #B3AF8F;
 }
 
 footer {
