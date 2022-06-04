@@ -26,22 +26,31 @@ body {
 .join-card  {
     width: 100vw;
     padding: 0;
-    margin: 0px;
+    margin: 0 auto;
     
 }
 
+.card-title {
+    color: #A2412E;
+}
+.card-img {
+    opacity: 50%;
+}
+
 .card.bg-dark{
-    margin: 0;
+    margin: 0 auto;
     background-size: 100%;
 }
 
 .card-img-overlay {
     padding: 20px;
-    margin-top: 25vh;
+    margin: 0 auto;
+    margin-top: 20em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    max-width: 70%;
 }
 
 
@@ -117,7 +126,28 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    margin:0;
+    margin: 25px 0 25px 0;
+}
+
+.join-heading {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.join-form {
+    padding-top: 20px;
+    margin: 0 auto;
+    max-width: 60%;
+    padding-bottom: 20px;
+}
+
+.join-button {
+    background-color: #66999B;
+    border-color: #B3AF8F;
+}
+
+.join-button:hover {
+    background-color: #2B3A67;
 }
 
 footer {
@@ -157,7 +187,7 @@ footer {
 
 @media only screen and (max-width: 400px) {
     .card {
-        width: 80vw;
+        max-width: 80%;
     }
 
     #hero-image {
