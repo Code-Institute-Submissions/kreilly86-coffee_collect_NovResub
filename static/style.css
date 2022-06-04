@@ -1,5 +1,4 @@
 * {
-    box-sizing: border-box;
     font-family: 'Noto sans', sans-serif;
     margin: 0; 
     padding: 0;
@@ -7,7 +6,6 @@
 
 body {
     background-color: white;
-    overflow-wrap: hidden;
     font-family: 'Noto sans', sans-serif;
     font-weight: 400;
     background-color: white;
@@ -15,10 +13,12 @@ body {
 }
 
 #hero-image {
-    width: 100vw;
-    margin-bottom: 15px;
     opacity: 70%; 
+    width: 100vw;
+    padding: 0;
+    margin: 0;
 }
+
 
 h1 {
     font-family: 'Fjalla One', sans-serif;
@@ -36,13 +36,13 @@ h2 {
 }
 
 .navbar li {
-   font-size: 1.3em;
+   font-size: 1.4em;
 }
 
 .navbar i {
     font-size: 1.7rem;
     color: 2B3A67;
-    margin-right: 1.5rem;
+    margin-right: 1.5em;
 }
 
 #sign-in {
@@ -53,27 +53,13 @@ h2 {
     padding: 20px;
     border-color: #B3AF8F;
     border-width: 2px;
-    margin: 65px;
+    margin: 20px;
     border-style: solid;
-    width: 80vw;
-    display: flexbox;
-    align-content: center;
 }
 
 .card-text {
     color: 2B3A67;
     font-size: 1.25rem;
-}
-
-
-.collecting {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container {
-    flex:1;
 }
 
 .coffee-chain {
@@ -99,6 +85,7 @@ h2 {
 
 .big-icon img {
     transform: scale(0.2);
+    justify-content: center;
 }
 
 footer {
@@ -132,17 +119,16 @@ footer {
     margin: 10px; 
 }
 
-
-/* Media Quieries */
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { 
-   
+@media only screen and (max-width: 400px) {
+    .card {
+        width: 80vw;
     }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+    .card-text {
+        font-size: 1rem;
+    }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
+    .carousel-inner {
+        width: 100vw;
+    }
+}
