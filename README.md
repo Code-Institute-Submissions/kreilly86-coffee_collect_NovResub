@@ -13,7 +13,7 @@
 
 - To promote information sharing about the coffee distribution chain
 
-- To allow members to add coffees to the resource database and track which coffees are most popular
+- To allow members to add coffees to the resource database and track coffees and new trends.
 <br>
 <hr>
 
