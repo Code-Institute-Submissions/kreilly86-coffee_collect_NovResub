@@ -209,6 +209,12 @@ footer {
    
     .navbar {
         padding: 0;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .navbar-brand {
+        margin: 0;
     }
 
     .card-text {
