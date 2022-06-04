@@ -45,18 +45,19 @@ h2 {
     margin-right: 1.5rem;
 }
 
-.sign-in {
-    color: 2B3A67;
+#sign-in {
+    color: #2B3A67;
 }
 
 .card {
     padding: 20px;
-    border-color: 9BA0A3;
-    border-width: 1px;
+    border-color: #B3AF8F;
+    border-width: 2px;
     margin: 65px;
     border-style: solid;
-    width: 20vw;
-    display: inline-flex;
+    width: 80vw;
+    display: flexbox;
+    align-content: center;
 }
 
 .card-text {
@@ -87,7 +88,7 @@ h2 {
 
 .carousel-caption {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .carousel-caption h3 {
@@ -126,8 +127,22 @@ footer {
 
 .social-links i {
     font-size: 1.75rem;
-    color: 2B3A67;
+    color: #2B3A67;
     padding: 10px;
     margin: 10px; 
 }
+
+
+/* Media Quieries */
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+   
+    }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
 
