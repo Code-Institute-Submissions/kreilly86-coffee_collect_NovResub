@@ -44,6 +44,10 @@ body {
     margin-left: -1.5rem;
 }
 
+.coffee-info {
+    font-weight: bold;
+}
+
 .card-img {
     opacity: 50%;
 }
