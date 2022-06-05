@@ -433,9 +433,7 @@ h2 {
     }
 
     .social-links {
-        display: flex;
-        align-content: center;
-        text-align: center;
+        justify-content: center;
         padding: 20px;
         margin-bottom: 25px;
     }
@@ -458,7 +456,7 @@ h2 {
     .footer-fixed {
         display: flex;
         align-items: center;
-        height: auto;
+        height: fit-content;
         width: 100vw;
         flex-direction: column;
     }
@@ -498,15 +496,16 @@ h2 {
         height: auto;
     }
 
+    .social-links {
+        justify-content: center;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
     .social-links li {
         margin: 0;
         align-items: center;
         line-height: 0%;
         height: auto;
-    }
-
-    .social-links i {
-        padding: 5px;
-        margin: 0;
     }
 }
