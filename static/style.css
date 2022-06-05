@@ -9,6 +9,17 @@ body {
     padding: 0;
 }
 
+.container .container-fluid {
+    padding: 0;
+    --bs-gutter-x: -1.5em;
+}
+
+.container 
+.container-fluid {
+    width: 100vw;
+    --bs-gutter-x: 0em;
+}
+
 #hero-image {
     opacity: 70%;
     width: 100vw;
@@ -23,7 +34,6 @@ body {
     margin: 0;
     margin-left: -1.5rem;
 }
-
 
 .card-title {
     color: #A2412E;
@@ -119,14 +129,30 @@ h2 {
 
 .about-us {
     display: flex;
+    width: 100vw;
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    margin: 25px 0 25px 0;
+    margin: 0 auto;
+}
+
+.about-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 25px 0;
+    padding: 0;
 }
 
 .join {
     background-color: #B8BFA8;
+    padding: 0;
+}
+
+.join-us {
+    width: 100vw;
+    align-items: center;
+    justify-items: center;
     padding: 0;
 }
 
@@ -145,6 +171,11 @@ h2 {
 .join-heading {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.row {
+    margin: 0;
+    width: 100vw;
 }
 
 #join-image {
@@ -377,10 +408,6 @@ footer {
         font-size: small;
         line-height: 0%;
         height: auto;
-    }
-
-    .row {
-       
     }
 
 }
