@@ -9,11 +9,12 @@ STATUS = ((0, "Draft")), ((1, "Published"))
 class Post(models.Model):
     producer = models.CharField(max_length=50, unique=True)
     region = models.CharField(max_length=50, unique=True)
-    varietyprocess = models.CharField(max_length=50, unique=True)
+    variety = models.CharField(max_length=50, unique=True)
+    process = models.CharField(max_length=50, unique=True)
     flavournotes = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='coffee_likes',blank=True)
+    likes = models.ManyToManyField(User, related_name='coffee_likes', blank=True)
     approved = models.BooleanField(default=False)
 
 

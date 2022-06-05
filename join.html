@@ -116,6 +116,9 @@
       <h2 class="join-heading text-center">Want to contribute to our Database?</h2>
       <p class="text-center">Sign-up below to start interacting</p>
       <form class="join-form">
+
+        {% crsf_token %}
+        
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
