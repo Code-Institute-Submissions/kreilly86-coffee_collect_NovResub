@@ -14,9 +14,18 @@ body {
     --bs-gutter-x: -1.5em;
 }
 
+.row {
+    margin:0;
+}
+
+.homepage-collecting {
+    background-color: #B8BFA8;
+}
+
 .container-fluid {
     width: 100vw;
     --bs-gutter-x: 0em;
+    margin:0;
 }
 
 #hero-image {
@@ -100,6 +109,18 @@ h2 {
     margin: 0;
 }
 
+.collecting-title {
+    margin-top: 0;
+}
+
+#carouselExampleCaptions {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+}
+
 .carousel-inner {
     height: auto;
     display flex;
@@ -141,6 +162,9 @@ h2 {
     background-color: #A2412E;
 }
 
+.carousel-indicators {
+    margin-bottom: 0;
+}
 
 .big-icon img {
     transform: scale(0.2);
