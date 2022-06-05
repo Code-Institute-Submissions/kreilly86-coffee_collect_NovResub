@@ -15,7 +15,9 @@ body {
 }
 
 .row {
-    margin:0;
+    margin-bottom: 0;
+    line-height: normal;
+    width: 100vw;
 }
 
 .homepage-collecting {
@@ -123,8 +125,8 @@ h2 {
 
 .carousel-inner {
     height: auto;
-    display flex;
     align-content: center;
+    justify-content: center;
 }
 
 .carousel-item .active {
@@ -226,7 +228,6 @@ h2 {
 }
 
 .row {
-    margin-bottom: 50px;
     width: 100vw;
 }
 
@@ -253,11 +254,12 @@ h2 {
     background-color: #7C8C04;
 }
 
-footer {
+.footer-fixed {
     display: flex;
+    flex-direction: row;
     background-color: #2B3A67;
-    height: 250px;
-    width:100vw;
+    height: fit-content;
+    width: 100vw;
     margin: 0 auto;
     padding: 0;
 }
@@ -265,16 +267,12 @@ footer {
 #contact {
     color: white;
     font-size: 1.25rem;
-    padding: 10px;
-    margin-left: 20px;
-    text-align: left;
-    margin-top: 2%;
+    padding: 20px;
 }
 
 .social-links li {
     list-style: none;
-    text-align: justify;
-    margin-top: 20%;
+    margin: 50px 0px 50px 0px;
     width: 32px;
     height: 32px;
     padding: 25px;
@@ -283,15 +281,14 @@ footer {
 
 .social-links i {
     font-size: 2rem;
-    color: white;
-    
+    color: white;  
 }
 
 #small-print p {
     font-size: smaller;
-    text-align: center;
     color:  white;
-    margin-top: 200px;
+    margin: 50px 0 25px 0;
+    text-align: center;
 }
 
 @media only screen and (max-width: 400px) {
@@ -399,12 +396,13 @@ footer {
         width: 90vw;
     }
 
-    .footer {
+    .footer-fixed {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        height: auto;
-        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        height: fit-content;
+        width: 100vw;
     }
 
     #contact {
@@ -414,27 +412,50 @@ footer {
         line-height: 0.5em;
     }
 
-    #small-print {
-        padding: 0;
-        text-align: center;
-        margin: 0;
-        line-height: 0%;
-        color: white;
-        height: auto;
+    .social-links {
+        justify-content: center;
+        padding: 20px;
+        margin-bottom: 25px;
     }
 
-    .social-links {
+    #small-print {
         margin: 0;
-        align-items: center;
-        font-size: small;
-        line-height: 0%;
-        height: auto;
     }
 }
 
+@media only screen and (max-width: 576px) {
+    .footer-fixed {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: fit-content;
+        width: 100vw;
+    }
+
+    .social-links {
+        display: flex;
+        align-content: center;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .list-inline {
+        margin: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    #small-print {
+        margin: 0;
+    }
+
+}
+
+
 @media only screen and (max-width: 768px) {
     
-    .footer {
+    .footer-fixed {
         display: flex;
         align-items: center;
         height: auto;
@@ -480,9 +501,12 @@ footer {
     .social-links li {
         margin: 0;
         align-items: center;
-        font-size: small;
         line-height: 0%;
         height: auto;
     }
 
+    .social-links i {
+        padding: 5px;
+        margin: 0;
+    }
 }
