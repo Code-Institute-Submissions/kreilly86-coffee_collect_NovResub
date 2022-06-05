@@ -14,7 +14,6 @@ body {
     --bs-gutter-x: -1.5em;
 }
 
-.container 
 .container-fluid {
     width: 100vw;
     --bs-gutter-x: 0em;
@@ -25,7 +24,6 @@ body {
     width: 100vw;
     padding: 0;
     margin: 0;
-    margin-left: -1.5rem;
 }
 
 #about-image {
@@ -35,9 +33,6 @@ body {
     margin-left: -1.5rem;
 }
 
-.card-title {
-    color: #A2412E;
-}
 .card-img {
     opacity: 50%;
 }
@@ -100,24 +95,52 @@ h2 {
 
 .coffee-chain {
     align-items: center;
-    background-color: #B3AF8F;
+    background-color: white;
     width: 100vw;
+    margin: 0;
 }
 
 .carousel-inner {
-    width: 75vw;
-    justify-content: center;
+    height: auto;
+    display flex;
+    align-content: center;
+}
+
+.carousel-item .active {
+    width: 80vw;
+    padding: 0;
+    justify-content: left;
+    height: 350px;
+    margin: 0;
+    display: flex;
+    color: black;
 }
 
 .carousel-caption {
-    color: white;
+    color: black;
     font-size: 1.25rem;
 }
 
-.carousel-caption h3 {
-    color: #A2412E;
-    font-family: 'Fjalla One', sans-serif;
+.carousel-control-previous {
+    width: 80vw;
 }
+
+.carousel-control-next {
+    width: 60vw;
+}
+
+.carousel-control-prev-icon {
+    background-color:black;
+}
+
+.carousel-control-next-icon {
+    background-color: black;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #A2412E;
+}
+
 
 .big-icon img {
     transform: scale(0.2);
@@ -158,6 +181,7 @@ h2 {
 
 .join-info {
     padding: 10px;
+    margin-bottom: 50px;
 }
 
 .join-card .card  {
@@ -169,12 +193,16 @@ h2 {
 }
 
 .join-heading {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
+.col {
+    margin-bottom: 50px;
+}
+
 .row {
-    margin: 0;
+    margin-bottom: 50px;
     width: 100vw;
 }
 
@@ -231,7 +259,7 @@ footer {
 
 .social-links i {
     font-size: 2rem;
-    color: #B3AF8F;
+    color: white;
     
 }
 
@@ -309,12 +337,15 @@ footer {
         margin: 12px;
     }
 
-    .about.callout.jumbotron {
-        font-size: small;
+    .join-info {
         width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
     }
 
-    #about-image {
+    #about-image { 
         margin: 0;
         padding: 0;
         width: 100vw;
@@ -322,6 +353,11 @@ footer {
 
     .about-us {
         margin: 0;
+    }
+
+    .collect {
+        padding: 10px;
+        margin-top: 50px;
     }
 
     #contact {
@@ -372,7 +408,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
     
     .footer {
         display: flex;
@@ -382,8 +418,23 @@ footer {
         flex-direction: column;
     }
 
+    .container-fluid {
+        padding: 0;
+    }
+
+    #hero-image {
+        width: 100vw;
+        margin: 0;
+    }
+
+    #about-image {
+        width: 100vw;
+        margin: 0;
+    }
+
     .footer.container-fluid {
         --bs-gutter-x: -1.5rem;
+        padding: 0;
     }
 
     #contact {
