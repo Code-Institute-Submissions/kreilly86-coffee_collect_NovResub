@@ -20,6 +20,40 @@ body {
     width: 100vw;
 }
 
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    text-align: center;  
+}
+
+/* Nav Bar */
+
+.navbar li {
+    font-size: 1.4em;
+}
+
+.navbar i {
+    font-size: 1.7rem;
+    color: 2B3A67;
+    margin-right: 1.5em;
+}
+
+#sign-in {
+    color: #2B3A67;
+}
+
+/* Home page */
+
 .homepage-collecting {
     background-color: #B8BFA8;
 }
@@ -37,62 +71,8 @@ body {
     margin: 0;
 }
 
-#about-image {
-    width: 100vw;
-    padding: 0;
-    margin: 0;
-    margin-left: -1.5rem;
-}
-
 .coffee-info {
     font-weight: bold;
-}
-
-.card-img {
-    opacity: 50%;
-}
-
-.card-img-overlay {
-    padding: 20px;
-    margin: 0 auto;
-    margin-top: 20em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    max-width: 70%;
-}
-
-
-h1 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    padding: 10px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-h2 {
-    font-family: 'Fjalla One', sans-serif;
-    font-weight: 300;
-    padding: 10px;
-    text-align: center;
-    
-}
-
-.navbar li {
-    font-size: 1.4em;
-}
-
-.navbar i {
-    font-size: 1.7rem;
-    color: 2B3A67;
-    margin-right: 1.5em;
-}
-
-#sign-in {
-    color: #2B3A67;
 }
 
 .card {
@@ -176,9 +156,15 @@ h2 {
     transform: scale(0.2);
 }
 
+
+/* Coffees */
+
 .coffees {
     margin-bottom: 25px;
 }
+
+
+/* About Us */
 
 .about-us {
     display: flex;
@@ -196,6 +182,15 @@ h2 {
     margin: 0 0 25px 0;
     padding: 0;
 }
+
+#about-image {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    margin-left: -1.5rem;
+}
+
+/* Contribute/Join */ 
 
 .join {
     background-color: #B8BFA8;
@@ -258,6 +253,9 @@ h2 {
     background-color: #7C8C04;
 }
 
+
+/* Footer */ 
+
 .footer-fixed {
     display: flex;
     flex-direction: row;
@@ -281,7 +279,6 @@ h2 {
     height: 32px;
     padding: 25px;
 }
-
 
 .social-links i {
     font-size: 2rem;
