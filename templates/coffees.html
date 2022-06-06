@@ -1,116 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Coffee database collecting coffees by Producer, Region, Variety, Process
-    and Flavour Notes. Users can sign-up and add their own info cards">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <title>Coffee Collect</title>
+{% block content %}
+{% load static %}
 
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/2996cf3aa3.js" crossorigin="anonymous"></script>
-
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a href="index.html" class="navbar-brand"  >
-                <img src="static/images/cclogo.png" alt="coffee plant logo" id="cclogo">
-              </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="coffees.html">Coffees</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Contribute
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="join.html">Join</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sign-in</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="sign-in">
-                <a href="" aria-label="sign-in">
-                    <i class="fas fa-sign-in-alt" id="sign-in"></i></a>
-            </div>
-        </div>
-    </nav>
-
-    <h1 class="coffees">Coffees</h1>
+<h1 class="coffees">Coffees</h1>
 
     <div class="container-fluid">
         <section>
             <div class="row">
                 <div class="card mx-auto col-12 col-sm-12 col-md-5 col-lg-3">
-                    <img src="static/images/peru.png" class="card-img-top" alt="photo of empty coffee cup">
+                    <img src="{% static 'images/peru.png' %}" class="card-img-top" alt="photo of empty coffee cup">
                     <div class="card-body">
                         <p class="card-text"><span class="coffee-info">Producer/Region: </span>Percy Pintado / Cajamara, Peru</p>
                         <p class="card-text"><span class="coffee-info">Variety/Process: </span>Caturra / Washed</p>
-                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Peach and Chocolate<img src="static/images/002-peach.png"> <img
-                                src="static/images/003-chocolate-bar.png" alt="peach icon"></p>
+                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Peach and Chocolate<img src="../static/images/002-peach.png"> <img
+                                src="../static/images/003-chocolate-bar.png" alt="peach icon"></p>
                     </div>
                 </div>
                 <div class="card mx-auto col-12 col-sm-12 col-md-5 col-lg-3">
-                    <img src="static/images/peru.png" class="card-img-top" alt="photo of empty coffee cup">
+                    <img src="{% static 'images/peru.png' %}" class="card-img-top" alt="photo of empty coffee cup">
                     <div class="card-body">
                         <p class="card-text"><span class="coffee-info">Producer/Region: </span><span>Jose Perez / Jaen, Peru</span>
                         <p class="card-text"><span class="coffee-info">Variety/Process: </span>Bourbon & Caturra / Washed</p>
-                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Pear and Butterscotch <img src="static/images/009-pear.png" alt="pear icon"> <img
-                                src="static/images/024-caramel-1.png"></p>
+                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Pear and Butterscotch <img src="../static/images/009-pear.png" alt="pear icon"> <img
+                                src="../static/images/024-caramel-1.png"></p>
                     </div>
                 </div>
                 <div class="card mx-auto col-12 col-sm-12 col-md-5 col-lg-3">
-                    <img src="static/images/peru.png" class="card-img-top" alt="photo of empty coffee cup">
+                    <img src="{% static 'images/peru.png' %}" class="card-img-top" alt="photo of empty coffee cup">
                     <div class="card-body">
                         <p class="card-text"><span class="coffee-info">Producer/Region: </span>Monte Grande / Jaen, Peru</p>
                         <p class="card-text"><span class="coffee-info">Variety/Process: </span>Caturra, Catuaí & Pache / Washed</p>
-                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span> Plum and Chocolate<img src="static/images/008-plum.png" alt="plum icon"> <img
-                                src="static/images/003-chocolate-bar.png"></p>
+                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span> Plum and Chocolate<img src="../static/images/008-plum.png" alt="plum icon"> <img
+                                src="../static/images/003-chocolate-bar.png"></p>
                     </div>
                 </div>
             </div>
@@ -119,101 +41,91 @@
         <section>
             <div class="row">
                 <div class="card mx-auto col-12 col-sm-12 col-md-5 col-lg-3">
-                    <img src="static/images/colombia.png" class="card-img-top" alt="Coffee farm in Colombia">
+                    <img src="{% static 'images/colombia.png' %}" class="card-img-top" alt="Coffee farm in Colombia">
                     <div class="card-body">
                         <p class="card-text"><span class="coffee-info">Producer/Region: </span>Jose Martinez / Huila, Colombia</p>
                         <p class="card-text"><span class="coffee-info">Variety/Process: </span>Pink Bourbon/ Washed</p>
-                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Peach and Cinnamon<img src="static/images/002-peach.png" alt="peach icon"> <img
-                                src="static/images/016-cinnamon.png" alt="cinnamon stick icon"></p>
+                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Peach and Cinnamon<img src="../static/images/002-peach.png" alt="peach icon"> <img
+                                src="../static/images/016-cinnamon.png" alt="cinnamon stick icon"></p>
                     </div>
                 </div>
 
                 <div class="card mx-auto col-12 col-sm-12 col-md-5 col-lg-3">
-                    <img src="static/images/colombia.png" class="card-img-top" alt="Coffee farm in Colombia">
+                    <img src="{% static 'images/colombia.png' %}" class="card-img-top" alt="Coffee farm in Colombia">
                     <div class="card-body">
                         <p class="card-text"><span class="coffee-info">Producer/Region: </span>Jaime Ariza / Concordia, Colombia</p>
                         <p class="card-text"><span class="coffee-info">Variety/Process: </span>Caturra/ Washed</p>
-                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Red currant and Chamomille<img src="static/images/011-currant.png" alt="red current icon"> <img
-                                src="static/images/028-chamomile.png" alt="chamomile icon"></p>
+                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Red currant and Chamomille<img src="../static/images/011-currant.png" alt="red current icon"> <img
+                                src="../static/images/028-chamomile.png" alt="chamomile icon"></p>
                     </div>
                 </div>
 
                 <div class="card mx-auto col-12 col-sm-12 col-md-5 col-lg-3">
-                    <img src="static/images/colombia.png" class="card-img-top" alt="Coffee farm in Colombia">
+                    <img src="{% static 'images/colombia.png' %}" class="card-img-top" alt="Coffee farm in Colombia">
                     <div class="card-body">
                         <p class="card-text"><span class="coffee-info">Producer/Region: </span>Planadas Decaf / Tolima, Colombia</p>
                         <p class="card-text"><span class="coffee-info">Variety/Process: </span>Bourbon, Caturra & Typica/ Washed</p>
-                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Plum and Brown Sugar<img src="static/images/008-plum.png" alt="plum icon"> <img
-                                src="static/images/brown-sugar.png" alt="brown sugar icon"></p>
+                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Plum and Brown Sugar<img src="../static/images/008-plum.png" alt="plum icon"> <img
+                                src="../static/images/brown-sugar.png" alt="brown sugar icon"></p>
                     </div>
                 </div>
-
             </div>
         </section>
+        
         <section>
             <div class="row">
                 <div class="card mx-auto col-12 col-sm-12 col-md-5 col-lg-3">
-                    <img src="static/images/ecuador.png" class="card-img-top" alt="Birds eye view of coffee grounds in Kalita Wave">
+                    <img src="{% static 'images/ecuador.png' %}" class="card-img-top" alt="Birds eye view of coffee grounds in Kalita Wave">
                     <div class="card-body">
                         <p class="card-text"><span class="coffee-info">Producer/Region: </span>Carmen Tapia / Pichincha, Ecuador</p>
                         <p class="card-text"><span class="coffee-info">Variety/Process: </span>Typica Mejorado/ Washed</p>
-                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Apricot and Lychee <img src="static/images/001-apricot.png" alt="apricot icon"> <img
-                                src="static/images/013-lychee.png" alt="lychee icon"></p>
+                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Apricot and Lychee <img src="../static/images/001-apricot.png" alt="apricot icon"> <img
+                                src="../static/images/013-lychee.png" alt="lychee icon"></p>
                     </div>
                 </div>
                 <div class="card mx-auto col-12 col-sm-12 col-md-5 col-lg-3">
-                    <img src="static/images/ecuador.png" class="card-img-top" alt="Birds eye view of coffee grounds in Kalita Wave">
+                    <img src="{% static 'images/ecuador.png' %}" class="card-img-top" alt="Birds eye view of coffee grounds in Kalita Wave">
                     <div class="card-body">
                         <p class="card-text"><span class="coffee-info">Producer/Region: </span>Alejandra Guzman / Pichincha, Ecuador</p>
                         <p class="card-text"><span class="coffee-info">Variety/Process: </span>Caturra / Washed</p>
-                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Red currant and Marshmallow<img src="static/images/011-currant.png" alt="red currant icon"> <img
-                                src="static/images/012-marshmallow.png" alt="marshmallow icon"></p>
+                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Red currant and Marshmallow<img src="../static/images/011-currant.png" alt="red currant icon"> <img
+                                src="../static/images/012-marshmallow.png" alt="marshmallow icon"></p>
                     </div>
                 </div>
                 <div class="card mx-auto col-12 col-sm-12 col-md-5 col-lg-3">
-                    <img src="static/images/ecuador.png" class="card-img-top" alt="Birds eye view of coffee grounds in Kalita Wave">
+                    <img src="{% static 'images/ecuador.png' %}" class="card-img-top" alt="Birds eye view of coffee grounds in Kalita Wave">
                     <div class="card-body">
                         <p class="card-text"><span class="coffee-info">Producer/Region: </span>Altos de Marfil / El Limo, Ecuador</p>
                         <p class="card-text"><span class="coffee-info">Variety/Process: </span>Bourbon, Caturra & Typica/ Washed</p>
-                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Blueberries and Caramel<img src="static/images/031-blueberry.png" alt="blueberry icon"> <img
-                                src="static/images/023-caramel.png" alt="caramel icon"></p>
+                        <p class="card-text"><span class="coffee-info">Flavour Notes: </span>Blueberries and Caramel<img src="../static/images/031-blueberry.png" alt="blueberry icon"> <img
+                                src="../static/images/023-caramel.png" alt="caramel icon"></p>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer class="footer-fixed container-fluid">
-        <div class="col-12 col-sm-4" id="contact">
-          <h4>Get in touch</h4>
-          <br>
-          <p>e. info@coffee_collect.com</p>
-          <p>p. +353 67890 32145</p>
-        </div>
-    
-        <div class="col-12 col-sm-4" id="small-print">
-          <p>For educational purposes</p>
-          <p>Copyright 2022</p>
-        </div>
-    
-        <div class="social-links col-12 col-sm-4">
-          <ul class="list-inline">
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com" target=_blank rel=noopener
-                aria-label="Visit our Instagram page(opens in a new tab)"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com" target=_blank rel=noopener
-                aria-label="Visit our Facebook page(opens in a new tab)"><i class="fab fa-facebook-square"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com" target=_blank rel=noopener
-                aria-label="Visit our Linkedin page(opens in a new tab)"><i class="fab fa-linkedin"></i></a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+    <!--New Database Entries here-->
 
-</body>
+    <section>
+        <div class="row">
+            {% for post in post_list %}
+          
+            <div class="card mx-auto col-12 col-sm-12 col-md-5 col-lg-3">
+                <img src="static/images/peru.png" class="card-img-top" alt="photo of empty coffee cup">
+                <div class="card-body">
+                    <p class="card-text producer"><span class="coffee-info">Producer: </span><span>{{ post.producer }}</span></p>
+                    <p class="card-text region"><span class="coffee-info">Region: </span><span>{{ post.region }}</span></p>
+                    <p class="card-text variety"><span class="coffee-info">Variety: </span><span>{{ post.variety }}</span></p>
+                    <p class="card-text process"><span class="coffee-info">Process: </span><span>{{ post.process }}</span></p>
+                    <p class="card-text flavour"><span class="coffee-info">Flavour Notes: </span><span>{{ post.flavournotes }}</span></p>
+                    <hr/>
+                    <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                    {{ post.number_of_likes }}</p>
+                </div>
+            </div>         
+    </section> 
 
-</html>
+    {% endfor %}   
+
+    {%endblock%}

@@ -15,7 +15,6 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='coffee_likes', blank=True)
-    approved = models.BooleanField(default=False)
 
 
 class Meta:
