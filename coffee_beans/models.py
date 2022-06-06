@@ -12,7 +12,7 @@ class Post(models.Model):
     variety = models.CharField(max_length=50, unique=True)
     process = models.CharField(max_length=50, unique=True)
     flavournotes = models.CharField(max_length=50, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=50, unique=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='coffee_likes', blank=True)
 
