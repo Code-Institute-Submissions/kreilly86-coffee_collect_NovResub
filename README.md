@@ -72,9 +72,11 @@ I used Githubs [Kanban style project board](https://github.com/users/kreilly86/p
     -Could Have
 <br>
 
-## Features:
+## Features
 <hr>
+<br>
 
+## Features to be Implemented
 
 
 ## Design 
@@ -86,6 +88,8 @@ I used Githubs [Kanban style project board](https://github.com/users/kreilly86/p
 <br>
 I created the Coffee Collect logo using canva. I was looking for a minimalistic design, which highlights the coffee plant, reminding us that the coffee we consume is from a plant, and a lot of work goes into cultivating it.
 <br>
+
+### Fonts
 <br>
 
 ### Colour Scheme 
@@ -118,7 +122,6 @@ I used Bootstrap's nav menu for the project as I wanted a sleek and easy design 
 
 ### Manual Testing
 <hr>
-<br>
 
 ### Validators
 <hr>
@@ -143,14 +146,27 @@ Google Developer tools:
 <br>
 The site has been testing using Google developer tools across all break points with no issues
 <br>
+<br>
 
 ## Languages, Frameworks and Libraries used
 <hr>
 <br>
 
+- HTML/CSS
+- Font Awesome
+- Flaticon
+- Javascript
+- Django
+- Postgres?
+- Gunicorn
+- dj-database-url
+- psycopg2 
+- sqlparse  
+
 ## Deployment
 <hr>
 <br>
+Steps to Deployment to Heroku
 
 Deployment steps here
 
@@ -160,7 +176,7 @@ Deployment steps here
 <img src="static/images/adminerror.png">
 <br>
 When I was builing the database structure and creating an admin login superuser, I got an error message when I tried python3 manage.py runserver 
-and typed in /admin/ at the end of the address bar.
+and typed in /admin/ at the end of the address bar. This was because I started the project Front End and had been using python3 -m http.server to run my project. When I ttried to open the admin site I had an error because I hadn't created any views or translated my site into the Django framework
 <br>
 
 ## Credits
