@@ -7,7 +7,7 @@ STATUS = ((0, "Draft")), ((1, "Published"))
 
 
 class Post(models.Model):
-    producer = models.CharField(max_length=50, unique=True)
+    producer = models.CharField(max_length=50, unique=False)
     region = models.CharField(max_length=50, unique=False)
     variety = models.CharField(max_length=50, unique=False)
     process = models.CharField(max_length=50, unique=False)
