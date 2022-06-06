@@ -6,8 +6,7 @@ from .models import Post
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1.).order_by('-region')
-    template_name = 'coffees.html'
-
+    template_name = "coffees.html"
 
 class PostDetail(View):
 
