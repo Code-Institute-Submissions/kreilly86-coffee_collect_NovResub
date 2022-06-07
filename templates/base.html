@@ -79,8 +79,15 @@
                 </ul>
             </div>
             <div class="sign-in">
-                <a href="" aria-label="sign-in">
-                    <i class="fas fa-sign-in-alt" id="sign-in"></i></a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'account_logout' %}" aria-label="sign-in">
+                    <i class="fas fa-sign-out-alt" id="sign-out"></i>
+                </a>
+                {% else %}
+                <a href="{% url 'account_login' %}" aria-label="sign-in">
+                    <i class="fas fa-sign-in-alt" id="sign-in"></i>
+                </a>
+                {% endif %}
             </div>
         </div>
     </nav>
