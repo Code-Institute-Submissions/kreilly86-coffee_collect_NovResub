@@ -259,10 +259,12 @@ h2 {
 .join-button {
     background-color: #2B3A67;
     border-color: #B3AF8F;
+    color: white;
 }
 
 .join-button:hover {
-    background-color: #7C8C04;
+    background-color: #496A81;
+    color: white;
 }
 
 
