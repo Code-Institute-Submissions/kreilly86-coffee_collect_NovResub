@@ -1,9 +1,17 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.shortcuts import render
+from django.views import View
 
-# Create your models here.
 
 STATUS = ((0, "Draft")), ((1, "Published"))
+
+
+class Index(View):
+    template = 'index.html'
+
+    def get(self, request):
+        return render(request, self.template)
 
 
 class Post(models.Model):
