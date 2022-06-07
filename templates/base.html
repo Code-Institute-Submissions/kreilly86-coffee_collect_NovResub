@@ -80,7 +80,7 @@
             </div>
             <div class="sign-in">
                 {% if user.is_authenticated %}
-                <a href="{% url 'account_logout' %}" aria-label="sign-in">
+                <a href="{% url 'account_logout' %}" aria-label="sign-out">
                     <i class="fas fa-sign-out-alt" id="sign-out"></i>
                 </a>
                 {% else %}

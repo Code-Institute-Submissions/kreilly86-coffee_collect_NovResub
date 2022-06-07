@@ -52,6 +52,18 @@ h2 {
     color: #2B3A67;
 }
 
+#sign-in:hover {
+    color: #496A81;
+}
+
+#sign-out {
+    color:#2B3A67;
+}
+
+#sign-out:hover {
+    color: #496A81;
+}
+
 /* Home page */
 
 .homepage-collecting {
