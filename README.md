@@ -24,6 +24,8 @@
 ## UX:
 <hr>
 
+<img src="static/images/mainimage.png">
+
 ### Site Owner's Goals:
 <hr>
 
@@ -76,8 +78,17 @@ I used Githubs [Kanban style project board](https://github.com/users/kreilly86/p
 <hr>
 <br>
 
-## Features to be Implemented
+## Responsiveness
+<hr>
+<br>
 
+<img src="static/images/coffeesresponsive.png">
+<br>
+<br>
+<img src="static/images/sign-inresponsive.png">
+
+## Features to be Implemented
+<hr>
 
 ## Design 
 <hr>
@@ -157,7 +168,6 @@ The site has been testing using Google developer tools across all break points w
 - Flaticon
 - Javascript
 - Django
-- Postgres?
 - Gunicorn
 - dj-database-url
 - psycopg2 
