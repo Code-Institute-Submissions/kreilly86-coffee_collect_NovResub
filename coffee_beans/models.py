@@ -8,7 +8,7 @@ STATUS = ((0, "Draft")), ((1, "Published"))
 
 
 class Index(View):
-    template = 'index.html'
+    template = 'coffees.html'
 
     def get(self, request):
         return render(request, self.template)

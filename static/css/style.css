@@ -48,6 +48,10 @@ h2 {
     margin-right: 1.5em;
 }
 
+.dropdown-menu li{
+    font-size: 1rem;
+}
+
 #sign-in {
     color: #2B3A67;
 }
@@ -249,17 +253,21 @@ h2 {
     width: 100vw;
     
 }
+
 .join-form {
     padding-bottom: 20px;
     padding-top: 20px;
     margin: 0 auto;
-    max-width: 50%;  
+    max-width: 50%; 
+    list-style: none;
 }
+
 
 .join-button {
     background-color: #2B3A67;
     border-color: #B3AF8F;
     color: white;
+    padding: 5px;
 }
 
 .join-button:hover {
@@ -288,7 +296,7 @@ h2 {
 
 #contact {
     color: white;
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 20px;
 }
 
