@@ -184,7 +184,11 @@ I was able to create functionality for users to sign-up, login and log-out. I ha
 <br>
 - I tested the sign-up, and sign-in forms and they are functioning correctly. Users are redirected to the homepage and the icons at the right side of the nav bar will guide the user to sign-out if they are signed in, or sign-in if not already.
 <br>
-
+<br>
+- When I deployed to Heroku none of my static files loaded:
+<br>
+<img src="static/images/herokudeploynostatic.png">
+<br>
 
 ### Validators
 <hr>
