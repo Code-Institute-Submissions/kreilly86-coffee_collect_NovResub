@@ -78,9 +78,25 @@ I used Githubs [Kanban style project board](https://github.com/users/kreilly86/p
 <hr>
 <br>
 
+### Navigation
+<hr>
+<br>
+<img src="static/images/navbar.png">
+<br>
+The navigation bar was made with bootstrap, it consists of the home page, link to coffees page ,which shows the datbase entries displayed as cards. It also links to an about page, and a join page with further information about contributing to the database. There is also a drop down section on the navbar 'Contribute' which gives the user a choice between signing in, or signing up if they haven't already.
+<br>
+<img src="static/images/navbarmobile.png">
+<br>
+The menu disappears on smaller devices but has an easy to use hamburger style menu that opens to the left. Again this was in keeping with the minimalistic and clean colour scheme of the site.
+<br>
+
+I have also used font awesome icons to the right on the navbar which are clickable for users to sign-in if not already, or sign-out if already signed in.
+<br>
+
 ## Responsiveness
 <hr>
 <br>
+All pages work on mobile, tablet and larger screen sizes.
 
 <img src="static/images/coffeesresponsive.png">
 <br>
@@ -102,6 +118,7 @@ I created the Coffee Collect logo using canva. I was looking for a minimalistic 
 
 ### Fonts
 <br>
+I used Google fonts for the project, with a mix of Fjalla, and Noto Sans. I found these sleek and simple san-serif fonts worked well with the theme of the site.
 
 ### Colour Scheme 
 <br>
@@ -116,17 +133,43 @@ I kept the colour scheme of the site quite minimal not to distract from the mess
 <br>
 
 All images are taken from [Unsplash]("https://unsplash.com/")
+<sm>   <a href="https://www.flaticon.com/free-icons/login" title="login icons">Login icons created by Good Ware - Flaticon</a>
 
-### Navigation and menus
+(Photo by Reiseuhu on Unsplash
+Photo by PROJETO CAFÉ GATO-MOURISCO on Unsplash
+Photo by Nathan Dumlao on Unsplash
+Photo by Caelen Cockrum on Unsplash
+Photo by Becomes Co on Unsplash
+Photo by Devin Avery on Unsplash
+Photo by Helena Lopes on Unsplash
+Photo by Rodrigo Flores on Unsplash)
+
+<a href="https://www.flaticon.com/free-icons/coffee" title="coffee icons">Coffee icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/plant" title="plant icons">Plant icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/peach" title="peach icons">Peach icons created by Freepik - Flaticon</a>
+
+</sm>
 <br>
+<br>
+
+## Features to be Implemented
 <hr>
-<img src="static/images/navbar.png">
 <br>
-<img src="static/images/navbarmobile.png">
+
+In it's present state the database is not functioning as I had intended, and some user stories have not been met yet. They are the following:
 <br>
-I used Bootstrap's nav menu for the project as I wanted a sleek and easy design that worked across all devices. The menu disappears on smaller devices but has an easy to use hamburger style menu that opens to the left. Again this was in keeping with the minimalistic and clean colour scheme of the site.
+https://github.com/users/kreilly86/projects/3#card-82803814
 <br>
+https://github.com/users/kreilly86/projects/3#card-82803749
 <br>
+https://github.com/users/kreilly86/projects/3#card-82819886
+<br>
+https://github.com/users/kreilly86/projects/3#card-82803691
+<br>
+
+## Design 
+<hr>
+
 
 ## Testing
 <hr>
@@ -185,20 +228,32 @@ Deployment steps here
 <br>
 <img src="static/images/adminerror.png">
 <br>
-When I was builing the database structure and creating an admin login superuser, I got an error message when I tried python3 manage.py runserver 
-and typed in /admin/ at the end of the address bar. This was because I started the project Front End and had been using python3 -m http.server to run my project. When I ttried to open the admin site I had an error because I hadn't created any views or translated my site into the Django framework
+When I was building the database structure and creating an admin login superuser, I got an error message when I tried python3 manage.py runserver 
+and typed in /admin/ at the end of the address bar. This was because I started the project Front End and had been using python3 -m http.server to run my project. When I tried to open the admin site I had an error because I hadn't created any views or translated my site into the Django framework yet.
 <br>
+<br>
+
+### db.sqlite3
+<br>
+I found out during my project that db.sqlite3 was being tracked. I have since removeds this using command 'git rm -r --cached db.sqlite3'. I also reset my secret key in the local environment and on heroku.
+<br>
+
+###
+<br>
+
 
 ## Credits
 <hr>
 <br>
 - Credit to my mentor Simon Dehlin for advice, motivation and helping for my Milestone Project 4 idea.
 - Code Insitute tutorials and tutor support
+- Stack Overflow
 
 ### Code
 <br>
 <hr>
+
 - Bootstrap was used for the navbar, contact form, home page carousel and scattered through the site for layout tweaking.
--Stack overflow
--Slack Code Institute channel
+- Stack overflow
+- The Code Institute Django blog walkthrough 
 
