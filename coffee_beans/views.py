@@ -1,25 +1,21 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
-
-
-class PostList(generic.ListView):
-    model = Post
-    queryset = Post.objects.filter(status=1.).order_by('-region')
-    template_name = "coffees.html"
 
   
 def home(request):
-    return render(request, "index.html")
+    return render(request, 'index.html')
   
 
 def about(request):
-    return render(request, "about.html")
+    return render(request, 'about.html')
   
 
 def join(request):
-    return render(request, "join.html")
+    return render(request, 'join.html')
+
+def coffees(request):
+    return render(request, 'coffees.html')
 
 
 class PostDetail(View):
