@@ -166,16 +166,25 @@ https://github.com/users/kreilly86/projects/3#card-82819886
 <br>
 https://github.com/users/kreilly86/projects/3#card-82803691
 <br>
-
-## Design 
-<hr>
+<br>
+I was able to create functionality for users to sign-up, login and log-out. I hae also created an admin portal with Django and can post coffee entries to the database from there. I would like to improve this and add functionality so that the admin has to approve users adding to the database.
 
 
 ## Testing
 <hr>
 
 ### Manual Testing
-<hr>
+
+-Links. I have tested the various nav bar links, and site buttons and they are all functioning correctly
+-I have tested the admin portal, added entries to the database and deleted entries :
+<br>
+<img src="static/images/adminentry">
+<br>
+<img src="static/images/databaseentry.png">
+<br>
+- I tested the sign-up, and sign-in forms and they are functioning correctly. Users are redirected to the homepage and the icons at the right side of the nav bar will guide the user to sign-out if they are signed in, or sign-in if not already.
+<br>
+
 
 ### Validators
 <hr>
@@ -219,9 +228,27 @@ The site has been testing using Google developer tools across all break points w
 ## Deployment
 <hr>
 <br>
-Steps to Deployment to Heroku
+Steps to Deploy to Heroku:
+<br>
+Sign into Heroku account and select create new app.
 
-Deployment steps here
+Choose app name and select Europe region, click create app
+
+In local environment create a Procfile with the following:
+web: gunicorn *project name here *_database.wsgi 
+
+Click on resources tab in Heroku, and add-ons and select Heroku Postgres
+
+Click Settings tab and select reveal Config Vars
+
+Copy DATABASE_URL value to en.py file, and also create a SECRET_KEY here which is added as a key and value in confing vars on Heroku.
+
+When ready to deploy under deployment tab
+Select Github as deployment method and type in repository name of project
+
+Click search and hit connect on repository name
+
+Next hit deploy branch, and you will see "your app has been deployed", click on link to go to the deployed project
 
 ## Bugs and Errors
 <hr>
@@ -238,9 +265,14 @@ and typed in /admin/ at the end of the address bar. This was because I started t
 I found out during my project that db.sqlite3 was being tracked. I have since removeds this using command 'git rm -r --cached db.sqlite3'. I also reset my secret key in the local environment and on heroku.
 <br>
 
-###
+### File path names
 <br>
-
+I had some file paths using incorrect naming conventions for Django:
+<br>
+<img src="static/images/incorrectnaming.png">
+<br>
+Instead of ../static/images tbe path should read {% static images/ %}
+<br>
 
 ## Credits
 <hr>
