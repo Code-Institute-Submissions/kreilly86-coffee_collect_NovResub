@@ -1,8 +1,15 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from .models import Post
 
-  
+
+class PostList(generic.ListView):
+    model = Post
+    queryset = Post.objects.filter(status=1.)
+    template_name = "coffees.html"
+
+
 def home(request):
     return render(request, 'index.html')
   
@@ -13,6 +20,7 @@ def about(request):
 
 def join(request):
     return render(request, 'join.html')
+
 
 def coffees(request):
     return render(request, 'coffees.html')
