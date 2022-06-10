@@ -104,10 +104,6 @@ All pages work on mobile, tablet and larger screen sizes.
 <img src="static/images/sign-inresponsive.png">
 
 ## Features to be Implemented
-<hr>
-
-## Design 
-<hr>
 
 ### Coffee Collect Logo
 <br>
@@ -152,6 +148,13 @@ Photo by Rodrigo Flores on Unsplash)
 <br>
 <br>
 
+### Home page Carousel
+<br>
+<img src="static/images/carousel.png">
+<br>
+I used bootstrap to add a carousel to the home page, which shows flaticon icons to the left. The carousel describes what the site is collecting : Producer/region, processes/variety, and flavour notes of coffees.
+<br> 
+
 ## Features to be Implemented
 <hr>
 <br>
@@ -189,15 +192,21 @@ I was able to create functionality for users to sign-up, login and log-out. I ha
 <br>
 <img src="static/images/herokudeploynostatic.png">
 <br>
-
+<br>
+I ran the command python3 manage.py collectstatic, and none of my images or css were loading. I then iinstalled whitenoise, and added to middleware and this fixed the issue locally. (https://stackoverflow.com/questions/35557129/css-not-loading-wrong-mime-type-django). The deployed site in Heroku still has this issue.
+<br>
 ### Validators
 <hr>
 <br>
 
 - W3C Html validator
+Site passed validation
+<br>
+<img src="static/images/htmlcheck.png">
 <br>
 - WSC CSS validator
 <br>
+
 - Lighthouse in google dev tools
 <br>
 - Jshint Javascript
