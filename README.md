@@ -206,14 +206,21 @@ Site passed validation
 <br>
 - WSC CSS validator
 <br>
+Found parse errors
+<br>
+https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-kreilly86-coffeecollect-5rcf6ubskpv.ws-eu47.gitpod.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+<br>
 
 - Lighthouse in google dev tools
 <br>
-- Jshint Javascript
+<img src="static/images/lighthouse.png">
 <br>
 - PEP8 Python
 <br>
 <br>
+<img src="static/images/pep8test">
+<br>
+There was an error when I ran the PEP8 python test.
 
 ### Responsiveness
 <hr>

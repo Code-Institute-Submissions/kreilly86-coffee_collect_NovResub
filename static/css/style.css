@@ -44,7 +44,7 @@ h2 {
 
 .navbar i {
     font-size: 1.7rem;
-    color: 2B3A67;
+    color: #2B3A67;
     margin-right: 1.5em;
 }
 
@@ -100,13 +100,13 @@ h2 {
 }
 
 .card-text {
-    color: 2B3A67;
+    color: #2B3A67;
     font-size: 1.25rem;
 }
 
 .coffee-chain {
     align-items: center;
-    background-color: white;
+    background-color:  white;
     width: 100vw;
     margin: 0;
 }
