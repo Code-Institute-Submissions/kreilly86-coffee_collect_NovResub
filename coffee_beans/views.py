@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Coffees
+from .models import Coffee
 
 
 def home(request):
@@ -23,7 +23,7 @@ def coffees(request):
 class CoffeeDetail(View):
 
     def coffee(self, request, slug, *args, **kwargs):
-        queryset = Coffees.objects.filter(status=1).order_by('-region')
+        queryset = Coffee.objects.filter(status=1).order_by('-region')
         coffee = get_object_or_404(queryset, slug=slug)
         liked = False
         if coffee.likes.filter(id=self.request.user.id).exists():
@@ -35,7 +35,6 @@ class CoffeeDetail(View):
             {
                 "coffee": coffee,
                 "liked": liked,
-
             },
         )
 

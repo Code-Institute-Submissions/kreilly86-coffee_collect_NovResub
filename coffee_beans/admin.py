@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Coffees
+from .models import Coffee
 
 
-@admin.register(Coffees)
+@admin.register(Coffee)
 class CoffeeAdmin(admin.ModelAdmin):
     list_display = ('producer', 'slug', 'region',)
     search_fields = ['producer', 'flavournotes']

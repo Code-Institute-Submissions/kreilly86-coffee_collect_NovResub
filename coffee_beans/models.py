@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 STATUS = ((0, "Draft")), ((1, "Published"))
 
 
-class Coffees(models.Model):
+class Coffee(models.Model):
     producer = models.CharField(max_length=50, unique=False)
     region = models.CharField(max_length=50, unique=False)
     variety = models.CharField(max_length=50, unique=False)
