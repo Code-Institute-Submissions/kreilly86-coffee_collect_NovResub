@@ -23,6 +23,8 @@ class Coffee(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='coffee_likes', blank=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
 
 
 class Meta:
