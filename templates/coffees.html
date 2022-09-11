@@ -8,25 +8,25 @@
 <div class="container-fluid">
     <!--New Database Entries here-->
     <section>
-        <div class="row">
-            {% for coffee in Coffees %}
+        <div class="row coffee-entries">
+            {% for coffee in coffees %}
             <div class="card mx-auto col-sm-12 col-md-5 col-lg-3">
                 <img src="" class="card-img-top" alt="photo of empty coffee cup">
                 <div class="card-body">
-                    <p class="card-text producer"><span class="coffee-info">Producer:
+                    <p class="coffee-text"><span class="coffee-info">Producer:
                         </span><span>{{ coffee.producer }}</span></p>
-                    <p class="card-text region"><span class="coffee-info">Region:
+                    <p class="coffee-text"><span class="coffee-info">Region:
                         </span><span>{{ coffee.region }}</span></p>
-                    <p class="card-text variety"><span class="coffee-info">Variety:
+                    <p class="coffee-text"><span class="coffee-info">Variety:
                         </span><span>{{ coffee.variety }}</span>
                     </p>
-                    <p class="card-text process"><span class="coffee-info">Process:
+                    <p class="coffee-text"><span class="coffee-info">Process:
                         </span><span>{{ coffee.process }}</span>
                     </p>
-                    <p class="card-text flavour"><span class="coffee-info">Flavour Notes:
+                    <p class="coffee-text"><span class="coffee-info">Flavour Notes:
                         </span><span>{{ coffee.flavournotes }}</span></p>
                     <hr>
-            {% endfor %}
+            
                 </div>
                 <strong>
                 {% if user.is_authenticated %}
@@ -48,7 +48,8 @@
                 </strong>
             </div>
         </div>
+            {% endfor %}
     </section>
 </div>
 
-{% endblock %}
+{% endblock content %}

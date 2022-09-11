@@ -188,6 +188,13 @@ h2 {
     color: #2B3A67;
     font-size: 1rem;
 }
+
+.coffee-entries {
+    width: 100vw;
+    height: fit-content;
+    margin-top: 50px;
+}
+
 /* About Us */
 
 .about-us {
