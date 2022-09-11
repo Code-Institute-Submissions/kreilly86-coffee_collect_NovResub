@@ -19,7 +19,7 @@
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-
+# Coffee Collect
 
 ## UX:
 <hr>
@@ -102,8 +102,6 @@ All pages work on mobile, tablet and larger screen sizes.
 <br>
 <br>
 <img src="static/images/sign-inresponsive.png">
-
-## Features to be Implemented
 
 ### Coffee Collect Logo
 <br>
@@ -195,6 +193,7 @@ I was able to create functionality for users to sign-up, login and log-out. I ha
 <br>
 I ran the command python3 manage.py collectstatic, and none of my images or css were loading. I then iinstalled whitenoise, and added to middleware and this fixed the issue locally. (https://stackoverflow.com/questions/35557129/css-not-loading-wrong-mime-type-django). The deployed site in Heroku still has this issue.
 <br>
+
 ### Validators
 <hr>
 <br>
@@ -291,7 +290,7 @@ I had some file paths using incorrect naming conventions for Django:
 <br>
 <img src="static/images/incorrectnaming.png">
 <br>
-Instead of ../static/images tbe path should read {% static images/ %}
+Instead of ../static/images tbe path should read {% static 'images' %}
 <br>
 
 ## Credits
@@ -300,6 +299,8 @@ Instead of ../static/images tbe path should read {% static images/ %}
 - Credit to my mentor Simon Dehlin for advice, motivation and helping for my Milestone Project 4 idea.
 - Code Insitute tutorials and tutor support
 - Stack Overflow
+- Code Institute's Slack channel 
+<br>
 
 ### Code
 <br>
