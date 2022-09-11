@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Coffee
 
 
-class PostList(generic.ListView):
-    model = Post
-    queryset = Post.objects.filter(status=1.)
+class CoffeeList(generic.ListView):
+    model = Coffee
+    queryset = Coffee.objects.filter(status=1.)
     template_name = "coffees.html"
 
 
@@ -26,33 +26,35 @@ def coffees(request):
     return render(request, 'coffees.html')
 
 
-class PostDetail(View):
+class CoffeeDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1).order_by('-region')
-        post = get_object_or_404(queryset, slug=slug)
+        queryset = Coffee.objects.filter(status=1).order_by('-region')
+        coffee = get_object_or_404(queryset, slug=slug)
         liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
+        if coffee.likes.filter(id=self.request.user.id).exists():
             liked = True
 
         return render(
             request,
             "coffees.html",
             {
-                "post": post,
+                "coffee": coffee,
                 "liked": liked,
 
             },
         )
 
 
-class PostLike(View):
+class CoffeeLike(View):
     
-    def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
+    def coffee(self, request, slug, *args, **kwargs):
+        coffee = get_object_or_404(Post, slug=slug)
+        if coffee.likes.filter(id=request.user.id).exists():
+            coffee.likes.remove(request.user)
         else:
-            post.likes.add(request.user)
+            coffee.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('coffees', args=[slug]))
+
+

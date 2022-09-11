@@ -32,6 +32,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['coffee-collect.herokuapp.com', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-kreilly86-coffeecollect-zse3x2hhfhj.ws-eu64.gitpod.io'
+]
+
 
 # Application definition
 

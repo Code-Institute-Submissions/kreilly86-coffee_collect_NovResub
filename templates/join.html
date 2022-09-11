@@ -44,7 +44,7 @@
 <section class="container-fluid">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-        <form class="join-info signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+        <form class="join-info signup" id="signup_form" method="POST" action="{% url 'account_signup' %}">
             {% csrf_token %}
             {{ form.as_p }}
             {% if redirect_field_value %}
@@ -59,4 +59,4 @@
 </section>
 
 
-{%endblock%}
+{% endblock %}

@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import Post
+from .models import Coffee
 
 
-@admin.register(Post)
+@admin.register(Coffee)
 
 
-class PostAdmin(admin.ModelAdmin):
+class CoffeeAdmin(admin.ModelAdmin):
     list_display = ('producer', 'slug', 'region',)
     search_fields = ['producer', 'flavournotes']
     list_filter = ('producer', 'region', 'variety', 'process')
