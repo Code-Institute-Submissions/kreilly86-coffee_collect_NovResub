@@ -36,6 +36,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-kreilly86-coffeecollect-zse3x2hhfhj.ws-eu64.gitpod.io'
 ]
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Application definition
 
