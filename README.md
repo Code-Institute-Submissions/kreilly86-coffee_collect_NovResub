@@ -83,7 +83,8 @@ I used Githubs [Kanban style project board](https://github.com/users/kreilly86/p
 <br>
 <img src="static/images/navbar.png">
 <br>
-The navigation bar was made with bootstrap, it consists of the home page, link to coffees page ,which shows the datbase entries displayed as cards. It also links to an about page, and a join page with further information about contributing to the database. There is also a drop down section on the navbar 'Contribute' which gives the user a choice between signing in, or signing up if they haven't already.
+The navigation bar was made with bootstrap, it consists of the home page, link to coffees page ,which shows the datbase entries displayed as cards. It also links to an about page, and a join page with further information about contributing to the database. 
+<br>
 <br>
 <img src="static/images/navbarmobile.png">
 <br>
@@ -152,6 +153,7 @@ Photo by Rodrigo Flores on Unsplash)
 <br>
 I used bootstrap to add a carousel to the home page, which shows flaticon icons to the left. The carousel describes what the site is collecting : Producer/region, processes/variety, and flavour notes of coffees.
 <br> 
+<br>
 
 ## Features to be Implemented
 <hr>
@@ -282,7 +284,7 @@ and typed in /admin/ at the end of the address bar. This was because I started t
 
 ### db.sqlite3
 <br>
-I found out during my project that db.sqlite3 was being tracked. I have since removeds this using command 'git rm -r --cached db.sqlite3'. I also reset my secret key in the local environment and on heroku.
+I found out during my project that db.sqlite3 was being tracked. I have since removed this using command 'git rm -r --cached db.sqlite3'. I also reset my secret key in the local environment and on heroku.
 <br>
 
 ### File path names

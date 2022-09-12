@@ -176,7 +176,7 @@ h2 {
 /* Coffees */
 
 .coffees {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
 .coffee-card {
@@ -192,11 +192,10 @@ h2 {
 .coffee-entries {
     width: 100vw;
     height: fit-content;
-    margin-top: 50px;
+    margin-top: 25px;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 5px;
-    display: inline-flexbox;
 }
 
 /* About Us */
