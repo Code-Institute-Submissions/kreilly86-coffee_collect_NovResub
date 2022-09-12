@@ -179,7 +179,8 @@ I was able to create functionality for users to sign-up, login and log-out. I ha
 -Links. I have tested the various nav bar links, and site buttons and they are all functioning correctly
 -I have tested the admin portal, added entries to the database and deleted entries :
 <br>
-<img src="static/images/adminentry">
+<img src="static/images/adminentry.png">
+<br>
 <br>
 <img src="static/images/databaseentry.png">
 <br>
@@ -290,7 +291,7 @@ I had some file paths using incorrect naming conventions for Django:
 <br>
 <img src="static/images/incorrectnaming.png">
 <br>
-Instead of ../static/images tbe path should read {% static 'images' %}
+Instead of ../static/images the path should read {% static 'images' %}
 <br>
 
 ## Credits
@@ -301,6 +302,7 @@ Instead of ../static/images tbe path should read {% static 'images' %}
 - Stack Overflow
 - Code Institute's Slack channel 
 <br>
+
 
 ### Code
 <br>

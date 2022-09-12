@@ -16,28 +16,30 @@ def join(request):
     return render(request, 'join.html')
 
 
+
 def coffees(request):
-    return render(request, 'coffees.html')
+    coffees_list = Coffee.objects.all()   
+    context = {
+        'coffees': coffees_list,
+     }
+    return render(request, 'coffees.html', context)
 
 
-class CoffeeDetail(View):
+#class CoffeeDetail(View):
 
-    coffees = Coffee.objects.all()
-    def get(self, request, slug, *args, **kwargs):
-        coffee = get_object_or_404(coffees, slug=slug)
-        liked = False
-        if coffee.likes.filter(id=self.request.user.id).exists():
-            liked = True
+#   def get(self, request, slug, *args, **kwargs):
+#         coffee = get_object_or_404(coffees, slug=slug)
+#       liked = False
+#        if coffee.likes.filter(id=self.request.user.id).exists():
+#           liked = True
 
-        return render(
-            request,
-            "coffees.html",
-            {
-                "coffee": coffee,
-                "liked": liked,
-                "coffees": coffees,
-            },
-        )
+#        return render(
+#            request,
+#            "coffees.html",
+#           {
+#               "liked": liked,
+#           },
+#       )
 
 
 class CoffeeLike(View):

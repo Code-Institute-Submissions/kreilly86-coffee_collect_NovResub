@@ -5,13 +5,12 @@
 
 <h1 class="coffees">Coffees</h1>
 
-<div class="container-fluid">
+<div class="container-fluid w-100 mb-2 d-flex">
     <!--New Database Entries here-->
-    <section>
+        {% for coffee in coffees %}
         <div class="row coffee-entries">
-            {% for coffee in coffees %}
-            <div class="card mx-auto col-sm-12 col-md-5 col-lg-3">
-                <img src="" class="card-img-top" alt="photo of empty coffee cup">
+            <div class="coffee-card card col-xs-12 col-md-3">
+                <img src="{% static 'images/colombia.png' %}" class="card-img-top" alt="photo of empty coffee cup">
                 <div class="card-body">
                     <p class="coffee-text"><span class="coffee-info">Producer:
                         </span><span>{{ coffee.producer }}</span></p>
@@ -26,30 +25,28 @@
                     <p class="coffee-text"><span class="coffee-info">Flavour Notes:
                         </span><span>{{ coffee.flavournotes }}</span></p>
                     <hr>
-            
                 </div>
                 <strong>
-                {% if user.is_authenticated %}
-                <form class="d-inline" action="{% url 'coffee_like' coffee.slug %}" method="POST">
-                    {% csrf_token %}
-                    {% if liked %}
-                    <button type="submit" name="coffee_like" value="{{ coffee.slug }}" class="btn-like"><i
-                            class="fas fa heart"></i></button>
+                    {% if user.is_authenticated %}
+                    <form class="d-inline" action="{% url 'coffee_like' coffee.slug %}" method="POST">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button type="submit" name="coffee_like" value="{{ coffee.slug }}" class="btn-like"><i
+                                class="fas fa heart"></i></button>
+                        {% else %}
+                        <button type="submit" name="coffee_like" value="{{ coffee.slug }}" class="btn-like"><i
+                                class="far fa heart"></i></button>
+                        {% endif %}
+                    </form>
                     {% else %}
-                    <button type="submit" name="coffee_like" value="{{ coffee.slug }}" class="btn-like"><i
-                            class="far fa heart"></i></button>
+                    <span class="text-secondary"><i class="far fa-heart"></i></span>
                     {% endif %}
-                </form>
-                {% else %}
-
-                <span class="text-secondary"><i class="far fa-heart"></i></span>
-                {% endif %}
-                <span class="text-secondary">{{ coffee.number_of_likes }}</span>
+                    <span class="text-secondary">{{ coffee.number_of_likes }}</span>
                 </strong>
+           
             </div>
-        </div>
-            {% endfor %}
-    </section>
+        </div> 
+        {% endfor %}
 </div>
 
 {% endblock content %}
