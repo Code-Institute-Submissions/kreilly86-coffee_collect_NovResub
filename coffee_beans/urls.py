@@ -8,5 +8,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('join/', views.join, name='join'),
     path('like/<slug:slug>', views.CoffeeLike.as_view(), name='coffee_like'),
-    path('<slug:slug>', views.CoffeeDetail.as_view(), name='liked'),
+    #path('<slug:slug>', views.CoffeeDetail.as_view(), name='liked'),
 ]

@@ -23,7 +23,13 @@
                         </span><span>{{ coffee.process }}</span>
                     </p>
                     <p class="coffee-text"><span class="coffee-info">Flavour Notes:
-                        </span><span>{{ coffee.flavournotes }}</span></p>
+                        </span><span>{{ coffee.flavournotes }}</span>
+                            {% if "Peach" in coffee.flavournotes %}
+                                <span><img src="{% static 'images/002-peach.png' %}"></span>
+                            {% elif "Milk Chocolate" in coffee.flavournotes %}
+                                <span><img src="{% static 'images/003-chocolate-bar.png' %}"></span>
+                            {% endif %} 
+                    </p>
                     <hr>
                 </div>
                 <strong>

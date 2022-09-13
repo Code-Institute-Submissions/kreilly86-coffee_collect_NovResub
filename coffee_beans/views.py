@@ -24,16 +24,16 @@ def coffees(request):
     return render(request, 'coffees.html', context)
 
 
-class CoffeeDetail(View):
+#class CoffeeDetail(View):
 
-    def get(self, request, slug, *args, **kwargs):
-        coffee = get_object_or_404(coffees, slug=slug)
-        liked = False
-        if coffee.likes.filter(id=self.request.user.id).exists():
-            liked = True
-        context = {
-            'liked': liked,
-        } 
+#    def get(self, request, slug, *args, **kwargs):
+#        coffee = get_object_or_404(Coffee, slug=slug)
+#       liked = False
+#        if coffee.likes.filter(id=self.request.user.id).exists():
+#            liked = True
+#       context = {
+#           'liked': liked,
+#       } 
 
 
 class CoffeeLike(View):
