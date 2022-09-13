@@ -5,54 +5,147 @@
 
 <h1 class="coffees">Coffees</h1>
 
-<div class="container-fluid w-100 mb-2 d-flex">
+<div class="container-fluid">
     <!--New Database Entries here-->
+    <div class="row coffee-entries">
         {% for coffee in coffees %}
-        <div class="row coffee-entries">
-            <div class="coffee-card card col-xs-12 col-md-3">
-                <img src="{% static 'images/colombia.png' %}" class="card-img-top" alt="photo of empty coffee cup">
-                <div class="card-body">
-                    <p class="coffee-text"><span class="coffee-info">Producer:
-                        </span><span>{{ coffee.producer }}</span></p>
-                    <p class="coffee-text"><span class="coffee-info">Region:
-                        </span><span>{{ coffee.region }}</span></p>
-                    <p class="coffee-text"><span class="coffee-info">Variety:
-                        </span><span>{{ coffee.variety }}</span>
-                    </p>
-                    <p class="coffee-text"><span class="coffee-info">Process:
-                        </span><span>{{ coffee.process }}</span>
-                    </p>
-                    <p class="coffee-text"><span class="coffee-info">Flavour Notes:
-                        </span><span>{{ coffee.flavournotes }}</span>
-                            {% if "Peach" in coffee.flavournotes %}
-                                <span><img src="{% static 'images/002-peach.png' %}"></span>
-                            {% elif "Milk Chocolate" in coffee.flavournotes %}
-                                <span><img src="{% static 'images/003-chocolate-bar.png' %}"></span>
-                            {% endif %} 
-                    </p>
-                    <hr>
-                </div>
-                <strong>
-                    {% if user.is_authenticated %}
-                    <form class="d-inline" action="{% url 'coffee_like' coffee.slug %}" method="POST">
-                        {% csrf_token %}
-                        {% if liked %}
-                        <button type="submit" name="coffee_like" value="{{ coffee.slug }}" class="btn-like"><i
-                                class="fas fa heart"></i></button>
-                        {% else %}
-                        <button type="submit" name="coffee_like" value="{{ coffee.slug }}" class="btn-like"><i
-                                class="far fa heart"></i></button>
-                        {% endif %}
-                    </form>
-                    {% else %}
-                    <span class="text-secondary"><i class="far fa-heart"></i></span>
+        <div class="coffee-card card col-xs-12 col-md-4">
+            <img src="{% static 'images/colombia.png' %}" class="card-img-top" alt="photo of empty coffee cup">
+            <div class="card-body">
+                <p class="coffee-text"><span class="coffee-info">Producer:
+                    </span><span>{{ coffee.producer }}</span></p>
+                <p class="coffee-text"><span class="coffee-info">Region:
+                    </span><span>{{ coffee.region }}</span></p>
+                <p class="coffee-text"><span class="coffee-info">Variety:
+                    </span><span>{{ coffee.variety }}</span>
+                </p>
+                <p class="coffee-text"><span class="coffee-info">Process:
+                    </span><span>{{ coffee.process }}</span>
+                </p>
+                <p class="coffee-text"><span class="coffee-info">Flavour Notes:
+                    </span><span>{{ coffee.flavournotes }}</span>
+                    <br>
+                    {% if "Apricot" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/apricot.png' %}"></span>
                     {% endif %}
-                    <span class="text-secondary">{{ coffee.number_of_likes }}</span>
-                </strong>
-           
+                    {% if "Blackberry" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/blackberry.png' %}"></span>
+                    {% endif %}
+                    {% if "Blood Orange" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/blood-orange.png' %}"></span>
+                    {% endif %}
+                    {% if "Blueberry" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/blueberry.png' %}"></span>
+                    {% endif %}
+                    {% if "Brown Sugar" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/brown-sugar.png' %}"></span>
+                    {% endif %}
+                    {% if "Butterscotch" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/butterscotch.png' %}"></span>
+                    {% endif %}
+                    {% if "Caramel" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/caramel.png' %}"></span>
+                    {% endif %}
+                    {% if "Chamomile" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/chamomile.png' %}"></span>
+                    {% endif %}
+                    {% if "Cherry" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/cherry.png' %}"></span>
+                    {% endif %}
+                    {% if "Chocolate" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/chocolate-bar.png' %}"></span>
+                    {% endif %}
+                    {% if "Cinnamon" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/cinnamon.png' %}"></span>
+                    {% endif %}
+                    {% if "Currant" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/currant.png' %}"></span>
+                    {% endif %}
+                    {% if "Ginger" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/ginger.png' %}"></span>
+                    {% endif %}
+                    {% if "Green Apple" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/green-apple.png' %}"></span>
+                    {% endif %}
+                    {% if "Green Grape" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/green-grape.png' %}"></span>
+                    {% endif %}
+                    {% if "Hazelnut" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/hazelnut.png' %}"></span>
+                    {% endif %}
+                    {% if "Hibiscus" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/hibiscus.png' %}"></span>
+                    {% endif %}
+                    {% if "Lemon Curd" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/lemon-curd.png' %}"></span>
+                    {% endif %}
+                    {% if "Lemon" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/lemon.png' %}"></span>
+                    {% endif %}
+                    {% if "Lychee" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/lychee.png' %}"></span>
+                    {% endif %}
+                    {% if "Marshmallow" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/marshmallow.png' %}"></span>
+                    {% endif %}
+                    {% if "Melon" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/melon.png' %}"></span>
+                    {% endif %}
+                    {% if "Nougat" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/nougat.png' %}"></span>
+                    {% endif %}
+                    {% if "Peach" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/peach-icon.png' %}"></span>
+                    {% endif %}
+                    {% if "Pear" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/pear.png' %}"></span>
+                    {% endif %}
+                    {% if "Plum" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/plum.png' %}"></span>
+                    {% endif %}
+                    {% if "Red Apple" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/red-apple.png' %}"></span>
+                    {% endif %}
+                    {% if "Red Grape" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/red-grape.png' %}"></span>
+                    {% endif %}
+                    {% if "Rose" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/rose.png' %}"></span>
+                    {% endif %}
+                    {% if "Strawberry" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/strawberry.png' %}"></span>
+                    {% endif %}
+                    {% if "White Sugar" in coffee.flavournotes %}
+                    <span><img src="{% static 'images/white-sugar.png' %}"></span>
+                    {% endif %}
+                </p>
+                <hr>
             </div>
-        </div> 
+            <strong>
+                {% if user.is_authenticated %}
+                <form class="d-inline" action="{% url 'coffee_like' coffee.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="coffee_like" value="{{ coffee.slug }}" class="btn-like"><i
+                            class="fas fa heart"></i></button>
+                    {% else %}
+                    <button type="submit" name="coffee_like" value="{{ coffee.slug }}" class="btn-like"><i
+                            class="far fa heart"></i></button>
+                    {% endif %}
+                </form>
+                {% else %}
+                <span class="text-secondary"><i class="far fa-heart"></i></span>
+                {% endif %}
+                <span class="text-secondary">{{ coffee.number_of_likes }}</span>
+            </strong>
+        </div>  
+        {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row coffee-entries"> 
+        {% endif %} 
         {% endfor %}
+
+    </div>
 </div>
 
-{% endblock content %}
+{% endblock %}
