@@ -296,6 +296,30 @@ I had some file paths using incorrect naming conventions for Django:
 Instead of ../static/images the path should read {% static 'images' %}
 <br>
 
+### Coffee Card Layout Issues
+<br>
+<br>
+When I was working on rendering the coffee database entries, I came up against some layout issues. The page was displaying 5 coffee cards on one line even though I had specified only 3 should be in one line on desktop. I set up a forloop counter, so that the cards would show 3 to a line. I accidentally put the closing {% endif %} tag in thr wrong position so this didn't work. When I realised this and placed it correctly the code functioned as expected:
+<br>
+<img src="static/images/coffees-layout.png">
+<br>
+
+### Flavour Note Icons
+<br>
+<br>
+I created an if/elif block to run so that when a flavour note appeared in a data entry, a corresponding icon would render in the html of the coffee card. The code ran, but out the coffee notes only one icon would appear, e.g. Peach, Cinnamon, only peach would appear. I realised if was because I was using elif and not ending the if statements. Once I ended each if statement with { % endif %} and began the next one with a new if I was able to see both icons appear per coffee.
+<br>
+<img src="static/images/flavour-note-icon-error.png">
+<br>
+
+### Coffee Like Error
+<br>
+<br>
+When I tried to create like functionality to enable users to like a coffee entry, I had an error with the entry:
+<br>
+<img src="static/images/coffee-like-error.png">
+<br>
+
 ## Credits
 <hr>
 <br>
