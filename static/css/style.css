@@ -198,6 +198,19 @@ h2 {
     padding: 5px;
 }
 
+.btn-like {
+    border: none;
+    background-color: transparent;
+    color:#2B3A67;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #2B3A67;
+    background: transparent;
+    border: none;
+}
+
 /* About Us */
 
 .about-us {

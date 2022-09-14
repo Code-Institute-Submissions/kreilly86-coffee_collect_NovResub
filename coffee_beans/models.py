@@ -9,7 +9,7 @@ class Coffee(models.Model):
     process = models.CharField(max_length=50, unique=False)
     flavournotes = models.CharField(max_length=50, unique=False)
     slug = models.SlugField(max_length=50, unique=True)
-    likes = models.ManyToManyField(User, related_name='coffee_like', blank=True)
+    likes = models.ManyToManyField(User, related_name='likes', blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
@@ -17,4 +17,4 @@ class Coffee(models.Model):
         ordering = ['-region']
 
     def number_of_likes(self):
-        return self.likes
+        return self.likes.count()

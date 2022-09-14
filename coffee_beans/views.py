@@ -28,14 +28,10 @@ class CoffeeLike(View):
 
     def post(self, request, slug, *args, **kwargs):
         coffee = get_object_or_404(Coffee, slug=slug)
-        liked = False
         if coffee.likes.filter(id=request.user.id).exists():
-            liked= True
             coffee.likes.remove(request.user)
         else:
             coffee.likes.add(request.user)
-        context = {
-            "coffee": coffee,
-        }
-        return HttpResponseRedirect(reverse('coffees', args=[slug]))
+    
+        return HttpResponseRedirect(reverse('coffees'))
         
