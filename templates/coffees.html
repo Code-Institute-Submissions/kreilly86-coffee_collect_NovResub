@@ -126,25 +126,24 @@
                 <form class="d-inline" action="{% url 'coffee_like' coffee.slug %}" method="POST">
                     {% csrf_token %}
                     {% if liked %}
-                    <button type="submit" name="likes" value="{{coffee.slug}}" class="btn-like"><i
-                            class="fas fa heart"></i></button>
+                    <button type="submit" name="likes" value="{{ coffee.slug }}" class="btn-like"><i
+                            class="fas fa-heart"></i></button>
                     {% else %}
-                    <button type="submit" name="likes" value="{{coffee.slug}}" class="btn-like"><i
-                            class="far fa heart"></i></button>
+                    <button type="submit" name="likes" value="{{ coffee.slug }}" class="btn-like"><i
+                            class="far fa-heart"></i></button>
                     {% endif %}
                 </form>
                 {% else %}
                 <span class="text-secondary"><i class="far fa-heart"></i></span>
                 {% endif %}
-                <span class="text-secondary">{{ coffee.number_of_likes }}</span>
+            <span class="text-secondary">{{ coffee.number_of_likes }}</span>
             </strong>
         </div>  
-        {% if forloop.counter|divisibleby:3 %}
+    {% if forloop.counter|divisibleby:3 %}
     </div>
     <div class="row coffee-entries"> 
-        {% endif %} 
-        {% endfor %}
-
+    {% endif %} 
+    {% endfor %}
     </div>
 </div>
 
