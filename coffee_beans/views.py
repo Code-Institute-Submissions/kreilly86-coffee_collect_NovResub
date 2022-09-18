@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views import View
+from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Coffee
+from .forms import CoffeeEntry
 
 
 def home(request):
@@ -17,12 +18,19 @@ def join(request):
 
 
 def coffees(request):
-    coffees_list = Coffee.objects.all() 
-  
+    coffees_list = Coffee.objects.all()
     context = {
         'coffees': coffees_list,
+        'coffee_add': False,
     }
     return render(request, 'coffees.html', context)
+
+
+class CoffeeList(generic.ListView):
+    model = Coffee
+    template_name = 'coffees.html'
+    paginate_by = 6
+    queryset = Coffee.objects.all()
 
 
 class CoffeeLike(View):
@@ -41,3 +49,23 @@ class CoffeeLike(View):
             "liked": liked,
         }
         return HttpResponseRedirect(reverse('coffees'))
+
+    
+def coffee_entries(request):
+
+        coffee_entry = CoffeeEntry(data=request.POST) 
+        if coffee_entry.is_valid():
+            coffee_entry.instance.name = request.user.username
+            coffee = coffee_entry.save()
+        else:
+            coffee_entry = CoffeeEntry()
+
+        return render(
+            request,
+            "coffee_entries.html",
+            {
+                "coffee_entry": CoffeeEntry(),
+                "coffees": coffees,
+                "coffee_add": True,
+            },
+        )

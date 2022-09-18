@@ -159,18 +159,8 @@ I used bootstrap to add a carousel to the home page, which shows flaticon icons 
 <hr>
 <br>
 
-In it's present state the database is not functioning as I had intended, and some user stories have not been met yet. They are the following:
-<br>
-https://github.com/users/kreilly86/projects/3#card-82803814
-<br>
-https://github.com/users/kreilly86/projects/3#card-82803749
-<br>
-https://github.com/users/kreilly86/projects/3#card-82819886
-<br>
-https://github.com/users/kreilly86/projects/3#card-82803691
-<br>
-<br>
-I was able to create functionality for users to sign-up, login and log-out. I hae also created an admin portal with Django and can post coffee entries to the database from there. I would like to improve this and add functionality so that the admin has to approve users adding to the database.
+
+
 
 
 ## Testing
@@ -179,7 +169,7 @@ I was able to create functionality for users to sign-up, login and log-out. I ha
 ### Manual Testing
 
 -Links. I have tested the various nav bar links, and site buttons and they are all functioning correctly
--I have tested the admin portal, added entries to the database and deleted entries :
+-I have tested the admin portal, added entries to the database and deleted entries:
 <br>
 <img src="static/images/adminentry.png">
 <br>
@@ -189,13 +179,15 @@ I was able to create functionality for users to sign-up, login and log-out. I ha
 - I tested the sign-up, and sign-in forms and they are functioning correctly. Users are redirected to the homepage and the icons at the right side of the nav bar will guide the user to sign-out if they are signed in, or sign-in if not already.
 <br>
 <br>
-- When I deployed to Heroku none of my static files loaded:
+- When I first deployed to Heroku none of my static files loaded:
 <br>
 <img src="static/images/herokudeploynostatic.png">
 <br>
 <br>
-I ran the command python3 manage.py collectstatic, and none of my images or css were loading. I then iinstalled whitenoise, and added to middleware and this fixed the issue locally. (https://stackoverflow.com/questions/35557129/css-not-loading-wrong-mime-type-django). The deployed site in Heroku still has this issue.
+I ran the command python3 manage.py collectstatic, and none of my images or css were loading. I then installed whitenoise, and added to middleware and this fixed the issue locally. (https://stackoverflow.com/questions/35557129/css-not-loading-wrong-mime-type-django). The deployed site in Heroku still had this issue.
 <br>
+<br>
+To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on Heroku and added the appropriate paths to settings.py.
 
 ### Validators
 <hr>
@@ -229,7 +221,7 @@ There was an error when I ran the PEP8 python test.
 <br>
 Google Developer tools:
 <br>
-The site has been testing using Google developer tools across all break points with no issues
+The site has been tested using Google developer tools across all break points with no issues
 <br>
 <br>
 
@@ -237,18 +229,22 @@ The site has been testing using Google developer tools across all break points w
 <hr>
 <br>
 
-- HTML/CSS
-- Font Awesome
-- Flaticon
-- Javascript
-- Django
-- Gunicorn
-- dj-database-url
-- psycopg2 
-- sqlparse  
+- Python - This project uses Python as its' core language
+- Django - This project is built with the Django framework
+- Bootstrap - Bootstrap is used throughout the site to add style, and responsiveness to the site
+- Font Awesome - Used for like symbols
+- Flaticon - Used to make icons for the coffee card flavour notes
+- SQLite - Was used to run the project localy
+- Cloudinary - Used to host static files
+- PostgreSQL - Heroku's PostgreSQL was used to store data of the deployed site
 
 ## Deployment
 <hr>
+<br>
+
+### Local 
+
+### Heroku Deployment
 <br>
 Steps to Deploy to Heroku:
 <br>
@@ -295,6 +291,7 @@ I had some file paths using incorrect naming conventions for Django:
 <br>
 Instead of ../static/images the path should read {% static 'images' %}
 <br>
+<br>
 
 ### Coffee Card Layout Issues
 <br>
@@ -319,10 +316,30 @@ When I tried to create like functionality to enable users to like a coffee entry
 <br>
 <img src="static/images/coffee-like-error.png">
 <br>
+The error was caused by missing code in the Coffee model:
+<br>
+<img src="static/images/like-model-error.png">
+<br>
+Correct format:
+<br>
+<img src="static/images/like-model-correct.png">
+<br>
+<br>
+Once the model was fixed, I was having issues with the Font Awesome heart icons when the user was signed in and added or deleted likes the font awesome icon wasnt showing beside the number of likes. I tried to change different parts of the code, and add CSS styling to the buttons, in the end I had mis-spelled the font awesome icon classes:
+<br>
+<br>
+<img src="static/images/signed-in-fa-error.png">
+<br>
+<br>
+<img src="static/images/font-awesome-error.png">
+<br>
+<br>
+
 
 ## Credits
 <hr>
 <br>
+
 - Credit to my mentor Simon Dehlin for advice, motivation and helping for my Milestone Project 4 idea.
 - Code Insitute tutorials and tutor support
 - Stack Overflow
@@ -330,9 +347,9 @@ When I tried to create like functionality to enable users to like a coffee entry
 <br>
 
 
-### Code
-<br>
+## Code
 <hr>
+<br>
 
 - Bootstrap was used for the navbar, contact form, home page carousel and scattered through the site for layout tweaking.
 - Stack overflow

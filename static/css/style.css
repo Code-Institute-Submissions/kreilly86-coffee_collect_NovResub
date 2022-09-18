@@ -200,14 +200,12 @@ h2 {
 
 .btn-like {
     border: none;
-    background-color: transparent;
     color:#2B3A67;
 }
 
 .btn-like:hover,
 .btn-like:active {
     color: #2B3A67;
-    background: transparent;
     border: none;
 }
 
