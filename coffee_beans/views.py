@@ -48,24 +48,26 @@ class CoffeeLike(View):
             "coffee": coffee,
             "liked": liked,
         }
-        return HttpResponseRedirect(reverse('coffees'))
+        return HttpResponseRedirect(reverse('coffees', context))
 
-    
-def coffee_entries(request):
 
+class CoffeeAddition(View):
+
+    def post(self, request, slug, *args, **kwargs):
+        coffee = get_object_or_404(Coffee, slug=slug)
         coffee_entry = CoffeeEntry(data=request.POST) 
         if coffee_entry.is_valid():
-            coffee_entry.instance.name = request.user.username
             coffee = coffee_entry.save()
+            coffee.save()
         else:
             coffee_entry = CoffeeEntry()
 
         return render(
             request,
-            "coffee_entries.html",
+            "coffee_addition.html",
             {
-                "coffee_entry": CoffeeEntry(),
-                "coffees": coffees,
+                "coffee": coffee,
+                "coffee_entry": coffee_entry,
                 "coffee_add": True,
             },
         )

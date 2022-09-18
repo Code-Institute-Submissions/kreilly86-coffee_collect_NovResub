@@ -8,24 +8,23 @@
 
 <div class="container-fluid">
     <!--New Database Entries here-->
+    
     <div class="row text-center">
         <div class="col-12 mb-5">
             <p class="lead">Please fill out the form below to add an entry to our database</p>
         </div>
         <div class="col">
         {% if coffee_add %}
-        <div class="alert alert-success" role="alert">
-            Your entry is awaiting approval
-        </div>
+            <div class="alert alert-success" role="alert">
+                Your entry is awaiting approval
+            </div>
         {% else %}
         {% if user.is_authenticated %}
             <form method="POST">
-            
             {{ coffee_entry | crispy }}
             {% csrf_token %}
             <button type="submit" class=" join-button btn btn-signup btn-lg">Submit</button>
             </form>
-
         {% endif %}
         {% endif %}
         </div>
