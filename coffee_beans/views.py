@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import View
 from django.http import HttpResponseRedirect
-from .models import Coffee
+from .models import Coffee, slugify
 from .forms import CoffeeEntry
 
 
@@ -25,6 +25,10 @@ def coffees(request):
     return render(request, 'coffees.html', context)
 
 
+def coffee_addition(request):
+    return render(request, 'coffee_addition.html')
+
+
 class CoffeeLike(View):
 
     def post(self, request, slug, *args, **kwargs):
@@ -37,18 +41,17 @@ class CoffeeLike(View):
         return HttpResponseRedirect(reverse('coffees'))
 
 
-class CoffeeAddition(View):
+class CoffeeAdd(View):
 
-    def post(self, request, slug, *args, **kwargs):
-
-        def save(self, *args, **kwargs): 
-        if not self.slug: 
-            self.slug = slugify(self.title) 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
-        
-        coffee_entry = CoffeeEntry(data=request.POST) 
+
+        coffee_entry = CoffeeEntry(data=request.POST)
         if coffee_entry.is_valid():
             coffee = coffee_entry.save()
+            coffee.save()
         else:
             coffee_entry = CoffeeEntry()
 
@@ -58,6 +61,5 @@ class CoffeeAddition(View):
             {
                 "coffee": coffee,
                 "coffee_entry": coffee_entry,
-                "coffee_add": True,
             },
         )
