@@ -25,10 +25,6 @@ def coffees(request):
     return render(request, 'coffees.html', context)
 
 
-def coffee_addition(request):
-    return render(request, 'coffee_addition.html')
-
-
 class CoffeeLike(View):
 
     def post(self, request, slug, *args, **kwargs):
@@ -40,26 +36,18 @@ class CoffeeLike(View):
 
         return HttpResponseRedirect(reverse('coffees'))
 
+def coffee_addition(request):
+    
+    coffee_entry = CoffeeEntry(data=request.POST)
+    if coffee_entry.is_valid():
+        coffee_entry.save() 
+    else:
+        coffee_entry = CoffeeEntry()
 
-class CoffeeAdd(View):
-
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
-        return super().save(*args, **kwargs)
-
-        coffee_entry = CoffeeEntry(data=request.POST)
-        if coffee_entry.is_valid():
-            coffee = coffee_entry.save()
-            coffee.save()
-        else:
-            coffee_entry = CoffeeEntry()
-
-        return render(
-            request,
-            "coffee_addition.html",
-            {
-                "coffee": coffee,
-                "coffee_entry": coffee_entry,
-            },
-        )
+    return render(
+        request,
+        "coffee_addition.html",
+        {
+            "coffee_entry": coffee_entry,
+        },
+    )

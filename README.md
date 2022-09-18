@@ -158,10 +158,7 @@ I used bootstrap to add a carousel to the home page, which shows flaticon icons 
 ## Features to be Implemented
 <hr>
 <br>
-
-
-
-
+At present the user is able to submit a form to the database, but I was unable to generate a slug field for this entry, which meant the coffees.html page which shows the entries on the front ended failed to load. The user has no feedback that they have added to the database.
 
 ## Testing
 <hr>
@@ -188,6 +185,12 @@ I ran the command python3 manage.py collectstatic, and none of my images or css 
 <br>
 <br>
 To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on Heroku and added the appropriate paths to settings.py.
+<br>
+<br>
+- The form for a logged in user to add to the coffee database is functional, but it does not generate a slug, which renders the coffees.html with a fault.
+<br> 
+<img src="static/images/userentries.png">
+<br>
 
 ### Validators
 <hr>
@@ -200,7 +203,7 @@ Site passed validation
 <br>
 - WSC CSS validator
 <br>
-Found parse errors
+
 <br>
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-kreilly86-coffeecollect-5rcf6ubskpv.ws-eu47.gitpod.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 <br>
@@ -212,9 +215,9 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-kreilly86-c
 - PEP8 Python
 <br>
 <br>
-<img src="static/images/pep8test">
+
 <br>
-There was an error when I ran the PEP8 python test.
+
 
 ### Responsiveness
 <hr>
