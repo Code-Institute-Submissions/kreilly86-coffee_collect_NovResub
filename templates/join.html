@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n %} 
+{% load i18n %}
 {% trans "Signup" %}
 
 {% block content %}
@@ -8,55 +8,44 @@
 
 <div class="container-fluid">
   <div class="join-us">
-
     <img src="{% static 'images/join.png' %}" id="join-image" alt="Photo of coffee sacks stacked">
   </div>
 
   <div class="row g-0">
-    <div class="join col-12">
-      <section class="callout jumbotron text-center">
-        <h1 class="card-title">Coffee Collect Database</h1>
+    <div class="callout jumbotron text-center join col-12">
+      <h1 class="card-title">Coffee Collect Database</h1>
+      <br>
+      <p class="join-info lead mb-5">
+        We started Coffee Collect in 2020 during the Covid Pandemic as a way to keep connected with our colleagues
+        in the coffee industry. We are a growing resource for coffee professionals and drinkers to learn more
+        about where there coffee comes from and highlight some of the unique qualities of the coffee regions we
+        represent.
+        Too often we consume coffee without thinking of the hard work that goes into it throughout the production,
+        and
+        distribution chain.
         <br>
-        <p class="join-info lead mb-5">
-          We started Coffee Collect in 2020 during the Covid Pandemic as a way to keep connected with our colleagues
-          in the coffee industry. We are a growing resource for coffee professionals and drinkers to learn more
-          about where there coffee comes from and highlight some of the unique qualities of the coffee regions we
-          represent.
-          Too often we consume coffee without thinking of the hard work that goes into it throughout the production,
-          and
-          distribution chain.
-          <br>
-          <br>
-          We are hoping you will join us and begin adding your own findings to the database, as we look to
-          the future of an ever more fragile industry.
-        </p>
-      </section>
+        <br>
+        We are hoping you will join us and begin adding your own findings to the database, as we look to
+        the future of an ever more fragile industry.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <h2 class="join-heading text-center">Want to contribute to our Database?</h2>
+      <p class="text-center">Sign-up to start interacting</p>
+      <div class="col-md-8 mt-3 offset-md-2">
+        <form class="join-info signup" id="signup_form" method="POST" action="{% url 'account_signup' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+          {% endif %}
+          <button class="join-button btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
-</div>
-
-<div class="col">
-  <h2 class="join-heading text-center">Want to contribute to our Database?</h2>
-  <p class="text-center">Sign-up to start interacting</p>
-
-
-<section class="container-fluid">
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-        <form class="join-info signup" id="signup_form" method="POST" action="{% url 'account_signup' %}">
-            {% csrf_token %}
-            {{ form.as_p }}
-            {% if redirect_field_value %}
-            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-            {% endif %}
-            <button class="join-button btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
-        </form>
-    </div>
-</div>
-</div>
-
-</section>
-
-
 {% endblock %}
