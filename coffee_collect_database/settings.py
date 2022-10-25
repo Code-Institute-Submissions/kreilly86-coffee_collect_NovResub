@@ -24,13 +24,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['coffee-collect.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-kreilly86-coffeecollect-zse3x2hhfhj.ws-eu64.gitpod.io'
-]
+CSRF_TRUSTED_ORIGINS = ['https://kreilly86-coffeecollect-onoo05mp3mj.ws-eu72.gitpod.io']
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
