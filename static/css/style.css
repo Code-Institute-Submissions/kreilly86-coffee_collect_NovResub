@@ -288,6 +288,7 @@ h2 {
     padding-top: 20px;
     margin: 0 auto;
     max-width: 50%; 
+    border: 2px;
 }
 
 .join-info {
