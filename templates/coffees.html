@@ -3,12 +3,10 @@
 {% block content %}
 {% load static %}
 
-<h1 class="coffees">Coffees</h1>
-
 <div class="container-fluid">
-    <!--New Database Entries here-->
+    <h1 class="coffees">Coffees</h1>
     <div class="row coffee-entries">
-    {% for coffee in coffees %}
+        {% for coffee in coffees %}
         <div class="coffee-card card col-xs-12 col-md-4">
             <img src="{% static 'images/colombia.png' %}" class="card-img-top" alt="photo of empty coffee cup">
             <div class="card-body">
@@ -136,23 +134,29 @@
                 {% else %}
                 <span class="text-secondary"><i class="far fa-heart"></i></span>
                 {% endif %}
-            <span class="text-secondary">{{ coffee.number_of_likes }}</span>
+                <span class="text-secondary">{{ coffee.number_of_likes }}</span>
             </strong>
-        </div>  
+        </div>
         {% if forloop.counter|divisibleby:3 %}
-        </div>
-        <div class="row coffee-entries"> 
-        {% endif %} 
-    {% endfor %}
     </div>
-    <div class="row mt-3 d-flex justify-content-center">
-        <div class="col-12 mx-auto">
-            <h2>Contribute to Our Database</h2>
-            <form method="POST" class="coffee-form mx-auto mb-2">
-            <a class="join-button btn btn-signup right text-center" href="{% url 'coffee_addition' %}" type="submit">Add a Coffee</a>
-        </form>
-        </div>
+    <div class="row coffee-entries">
+        {% endif %}
+        {% endfor %}
     </div>
-</div>
 
-{% endblock %}
+    <div class="row w-100 m-0 p-0 d-flex justify-content-center">
+        <div class="col-12 m-3 text-center">
+            <h2 class="mb-3">Contribute to Our Database</h2>
+            {% if user.is_authenticated %}
+            <form method="POST" class="mb-5">
+                <a class="join-button btn btn-signup m-0" href="{% url 'coffee_addition' %}" type="submit">Add
+                    a Coffee</a>
+            </form>
+            {% else %}
+            <div class="text-center">
+                <p>Please sign-up for an account to add coffees to our datebase</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endblock %}
