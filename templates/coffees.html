@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <h1 class="coffees">Coffees</h1>
     <div class="row coffee-entries">
-        {% for coffee in coffees %}
+    {% for coffee in coffees %}
         <div class="coffee-card card col-xs-12 col-md-4">
             <img src="{% static 'images/colombia.png' %}" class="card-img-top" alt="photo of empty coffee cup">
             <div class="card-body">
@@ -141,7 +141,7 @@
     </div>
     <div class="row coffee-entries">
         {% endif %}
-        {% endfor %}
+    {% endfor %}
     </div>
 
     <div class="row w-100 m-0 p-0 d-flex justify-content-center">
@@ -154,7 +154,7 @@
             </form>
             {% else %}
             <div class="text-center">
-                <p>Please sign-up for an account to add coffees to our datebase</p>
+                <p class="p-3">Please <a class="p-1" href="{% url 'account_signup' %}">sign-up</a>for an account to add coffees to our datebase</p>
             </div>
             {% endif %}
         </div>
