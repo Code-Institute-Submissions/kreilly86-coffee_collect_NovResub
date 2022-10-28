@@ -48,8 +48,19 @@ h2 {
     margin-right: 1.5em;
 }
 
-.dropdown-menu li{
+.users {
+    line-height: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-item {
     font-size: 1rem;
+}
+
+.dropdown-menu a {
+    text-transform: lowercase;
+    text-transform: capitalize;
 }
 
 #sign-in {
