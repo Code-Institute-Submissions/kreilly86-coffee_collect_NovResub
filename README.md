@@ -34,8 +34,8 @@
 - To promote information sharing about the coffee distribution chain
 
 - To allow members to add coffees to the resource database and track coffees and new trends.
-<br>
 <hr>
+<br>
 
 ### User Stories
 <hr>
@@ -51,6 +51,7 @@
 - As a site user I want to learn more about individual coffees and their producers so I understand more about where the coffee comes from
 
 <hr>
+<br>
 
 ### Wireframes
 <hr>
@@ -83,10 +84,12 @@ I used Githubs [Kanban style project board](https://github.com/users/kreilly86/p
 <br>
 <img src="static/images/navbar.png">
 <br>
+<br>
 The navigation bar was made with bootstrap, it consists of the home page, link to coffees page ,which shows the datbase entries displayed as cards. It also links to an about page, and a join page with further information about contributing to the database. 
 <br>
 <br>
 <img src="static/images/navbarmobile.png">
+<br>
 <br>
 The menu disappears on smaller devices but has an easy to use hamburger style menu that opens to the left. Again this was in keeping with the minimalistic and clean colour scheme of the site.
 <br>
@@ -108,6 +111,7 @@ All pages work on mobile, tablet and larger screen sizes.
 <br>
 <img src="static/images/cclogo.png">
 <br>
+<br>
 I created the Coffee Collect logo using canva. I was looking for a minimalistic design, which highlights the coffee plant, reminding us that the coffee we consume is from a plant, and a lot of work goes into cultivating it.
 <br>
 
@@ -122,6 +126,7 @@ I used Google fonts for the project, with a mix of Fjalla, and Noto Sans. I foun
 <br>
 <img src="static/images/coolors.png">
 <br>
+<br>
 I kept the colour scheme of the site quite minimal not to distract from the message I wanted to put across. I felt like the darker blue, greys and beige fitted quite well with the photos of coffee farm and nature spread through the site.
 
 ### Images 
@@ -130,7 +135,7 @@ I kept the colour scheme of the site quite minimal not to distract from the mess
 All images are taken from [Unsplash]("https://unsplash.com/")
 <sm>   <a href="https://www.flaticon.com/free-icons/login" title="login icons">Login icons created by Good Ware - Flaticon</a>
 
-(Photo by Reiseuhu on Unsplash
+Photo by Reiseuhu on Unsplash
 Photo by PROJETO CAFÉ GATO-MOURISCO on Unsplash
 Photo by Nathan Dumlao on Unsplash
 Photo by Caelen Cockrum on Unsplash
@@ -147,9 +152,10 @@ Photo by Rodrigo Flores on Unsplash)
 <br>
 <br>
 
-### Home page Carousel
+### Home Page Carousel
 <br>
 <img src="static/images/carousel.png">
+<br>
 <br>
 I used bootstrap to add a carousel to the home page, which shows flaticon icons to the left. The carousel describes what the site is collecting : Producer/region, processes/variety, and flavour notes of coffees.
 <br> 
@@ -158,7 +164,6 @@ I used bootstrap to add a carousel to the home page, which shows flaticon icons 
 ## Features to be Implemented
 <hr>
 <br>
-At present the user is able to submit a form to the database, but I was unable to generate a slug field for this entry, which meant the coffees.html page which shows the entries on the front ended failed to load. The user has no feedback that they have added to the database.
 
 ## Testing
 <hr>
@@ -173,23 +178,18 @@ At present the user is able to submit a form to the database, but I was unable t
 <br>
 <img src="static/images/databaseentry.png">
 <br>
-- I tested the sign-up, and sign-in forms and they are functioning correctly. Users are redirected to the homepage and the icons at the right side of the nav bar will guide the user to sign-out if they are signed in, or sign-in if not already.
+<br>
+- I have tested the login and log-out functionalilty of the site, and they are functioning correctly. Users are redirected to the homepage and the dropdown account symbol indicates a user's status. The icon dropdown will guide the user to sign-out if they are signed in, or sign-in if not already.
 <br>
 <br>
-- When I first deployed to Heroku none of my static files loaded:
-<br>
-<img src="static/images/herokudeploynostatic.png">
+<img src="static/images/login-menu.png">
 <br>
 <br>
-I ran the command python3 manage.py collectstatic, and none of my images or css were loading. I then installed whitenoise, and added to middleware and this fixed the issue locally. (https://stackoverflow.com/questions/35557129/css-not-loading-wrong-mime-type-django). The deployed site in Heroku still had this issue.
+- The user also receives a pop-up bootstrap success message after log in/ log out:
 <br>
 <br>
-To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on Heroku and added the appropriate paths to settings.py.
+<img src="static/images/login-success.png">
 <br>
-<br>
-- The form for a logged in user to add to the coffee database is functional, but it does not generate a slug, which renders the coffees.html with a fault.
-<br> 
-<img src="static/images/userentries.png">
 <br>
 
 ### Validators
@@ -199,11 +199,12 @@ To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on 
 - W3C Html validator
 Site passed validation
 <br>
+<br>
 <img src="static/images/htmlcheck.png">
+<br>
 <br>
 - WSC CSS validator
 <br>
-
 <br>
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-kreilly86-coffeecollect-5rcf6ubskpv.ws-eu47.gitpod.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 <br>
@@ -335,6 +336,27 @@ Once the model was fixed, I was having issues with the Font Awesome heart icons 
 <br>
 <br>
 <img src="static/images/font-awesome-error.png">
+<br>
+<br>
+
+### Heroku Static File Error
+<br>
+<br>
+When I first deployed to Heroku none of my static files loaded:
+<br>
+<img src="static/images/herokudeploynostatic.png">
+<br>
+<br>
+I ran the command python3 manage.py collectstatic, and none of my images or css were loading. I then installed whitenoise, and added to middleware and this fixed the issue locally. (https://stackoverflow.com/questions/35557129/css-not-loading-wrong-mime-type-django). The deployed site in Heroku still had this issue.
+<br>
+<br>
+To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on Heroku and added the appropriate paths to settings.py.
+<br>
+<br>
+- The form for a logged in user to add to the coffee database is functional, but it does not generate a slug, which renders the coffees.html with a fault.
+<br> 
+<br>
+<img src="static/images/userentries.png">
 <br>
 <br>
 
