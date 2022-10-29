@@ -232,11 +232,12 @@ h2 {
 .btn-like {
     border: none;
     color:#2B3A67;
+    background-color: white;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #2B3A67;
+    color: #496A81;
     border: none;
 }
 

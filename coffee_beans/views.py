@@ -14,8 +14,8 @@ def about(request):
     return render(request, 'about.html')
 
 
-def join(request):
-    return render(request, 'join.html')
+def contribute(request):
+    return render(request, 'contribute.html')
 
 
 def coffees(request):
@@ -37,7 +37,11 @@ class CoffeeLike(View):
         else:
             coffee.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('coffees', args=[slug]))
+        context = {
+            "coffee": coffee,
+            "liked": liked,
+        }
+        return HttpResponseRedirect(reverse('coffees'))
 
 
 def coffee_addition(request):

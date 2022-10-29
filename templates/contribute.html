@@ -34,17 +34,26 @@
   <div class="row">
     <div class="col">
       <h2 class="join-heading text-center">Want to contribute to our Database?</h2>
-      <p class="text-center">Sign-up to start interacting</p>
-      <div class="col-md-8 mt-3 offset-md-2">
-        <form class="join-info signup" id="signup_form" method="POST" action="{% url 'account_signup' %}">
-          {% csrf_token %}
-          {{ form.as_p }}
-          {% if redirect_field_value %}
-          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-          {% endif %}
-          <button class="join-button btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
-        </form>
+    {% if request.user.is_authenticated %}
+      <div class="col-12 text-center">
+        <form method="POST" class="mb-5">
+          <a class="join-button btn btn-signup m-0" href="{% url 'coffee_addition' %}" type="submit">Add
+              a Coffee</a>
+      </form>
       </div>
+    {% else %}
+    <p class="text-center">Sign-up to start interacting</p>
+    <div class="col-md-8 mt-3 offset-md-2">
+      <form class="join-info signup" id="signup_form" method="POST" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+        {% endif %}
+        <button class="join-button btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
+      </form>
+    </div>
+    {% endif %}
     </div>
   </div>
 </div>
