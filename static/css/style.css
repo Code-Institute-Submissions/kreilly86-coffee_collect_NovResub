@@ -48,19 +48,40 @@ h2 {
     margin-right: 1.5em;
 }
 
+.fa-solid, .fas {
+    font-weight: 900;
+}
+
+.fa-lg  {
+    font-size: 1.25em;
+    line-height: 2em;
+}
+
+.nav-link a {
+    color:#2B3A67;
+}
+
+.nav-link a:hover {
+    color: #496A81;
+}
+
 .users {
-    line-height: 2rem;
-    align-items: center;
-    justify-content: center;
+   margin-left: 25px;
 }
 
 .dropdown-item {
     font-size: 1rem;
 }
 
+.dropdown-menu {
+    margin-top: 30px;
+    align-items: center;
+}
+
 .dropdown-menu a {
     text-transform: lowercase;
     text-transform: capitalize;
+    
 }
 
 #sign-in {
