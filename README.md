@@ -171,7 +171,9 @@ I used bootstrap to add a carousel to the home page, which shows flaticon icons 
 
 ## Features to be Implemented
 <hr>
-<br>
+
+
+
 
 ## Testing
 <hr>
