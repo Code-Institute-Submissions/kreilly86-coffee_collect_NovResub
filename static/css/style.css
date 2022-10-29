@@ -80,8 +80,7 @@ h2 {
 
 .dropdown-menu a {
     text-transform: lowercase;
-    text-transform: capitalize;
-    
+    text-transform: capitalize;   
 }
 
 #sign-in {
@@ -429,6 +428,16 @@ h2 {
         margin: 0;
     }
 
+    .users {
+        margin: 0 !important;    
+    }
+
+    .account-status {
+        padding: 25px;
+        justify-content: center !important;
+        display: flex;
+    }
+
     .card-text {
         font-size: small;
     }
@@ -557,6 +566,16 @@ h2 {
         margin: 0;
     }
 
+    .users {
+        margin: 0 !important;    
+    }
+
+    .account-status {
+        padding: 25px;
+        justify-content: center !important;
+        display: flex;
+    }
+
 }
 
 
@@ -568,6 +587,12 @@ h2 {
         height: fit-content;
         width: 100vw;
         flex-direction: column;
+    }
+
+    .account-status {
+        padding: 25px;
+        justify-content: center !important;
+        display: flex;
     }
 
     .container-fluid {
