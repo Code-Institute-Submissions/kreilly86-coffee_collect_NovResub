@@ -6,13 +6,13 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<h2>{% trans "Sign Up" %}</h2>
+<h2 class="m-3">{% trans "Sign Up" %}</h2>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
 <div class="row">
-  <div class="col-md-8 mt-3 offset-md-2 mb-3">
-    <form class="join-form signup" id="signup_form" method="POST" action="{% url 'account_signup' %}">
+  <div class="col-md-8 mt-3 offset-md-2 mb-3 justify-content-center">
+    <form class="join-form signup mx-auto" id="signup_form" method="POST" action="{% url 'account_signup' %}">
       {% csrf_token %}
       {{ form.as_p }}
       {% if redirect_field_value %}
