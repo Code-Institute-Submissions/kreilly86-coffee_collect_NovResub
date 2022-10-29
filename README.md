@@ -35,7 +35,6 @@
 
 - To allow members to add coffees to the resource database and track coffees and new trends.
 <hr>
-<br>
 
 ### User Stories
 <hr>
@@ -51,7 +50,6 @@
 - As a site user I want to learn more about individual coffees and their producers so I understand more about where the coffee comes from
 
 <hr>
-<br>
 
 ### Wireframes
 <hr>
@@ -77,7 +75,6 @@ I used Githubs [Kanban style project board](https://github.com/users/kreilly86/p
 
 ## Features
 <hr>
-<br>
 
 ### Navigation
 <hr>
@@ -85,16 +82,16 @@ I used Githubs [Kanban style project board](https://github.com/users/kreilly86/p
 <img src="static/images/navbar.png">
 <br>
 <br>
-The navigation bar was made with bootstrap, it consists of the home page, link to coffees page ,which shows the datbase entries displayed as cards. It also links to an about page, and a join page with further information about contributing to the database. 
+The navigation bar was made with bootstrap, it consists of the home page, link to coffees page,which shows the datbase entries displayed as cards. It also links to an about page, and a contribute page with further information about contributing to the database. 
+<br>
+<br>
+I have used a font awesome user icon to the right on the navbar which drops down for users to sign-in if not already, or sign-out if already signed in.
+<br>
+The menu disappears on smaller devices but has an easy to use hamburger style menu that opens to the left. Again this was in keeping with the minimalistic and clean colour scheme of the site.
 <br>
 <br>
 <img src="static/images/navbarmobile.png">
 <br>
-<br>
-The menu disappears on smaller devices but has an easy to use hamburger style menu that opens to the left. Again this was in keeping with the minimalistic and clean colour scheme of the site.
-<br>
-
-I have also used font awesome icons to the right on the navbar which are clickable for users to sign-in if not already, or sign-out if already signed in.
 <br>
 
 ## Responsiveness
@@ -108,18 +105,23 @@ All pages work on mobile, tablet and larger screen sizes.
 <img src="static/images/sign-inresponsive.png">
 
 ### Coffee Collect Logo
+<hr>
 <br>
 <img src="static/images/cclogo.png">
 <br>
 <br>
 I created the Coffee Collect logo using canva. I was looking for a minimalistic design, which highlights the coffee plant, reminding us that the coffee we consume is from a plant, and a lot of work goes into cultivating it.
 <br>
+<br>
 
 ### Fonts
-<br>
+<hr>
 I used Google fonts for the project, with a mix of Fjalla, and Noto Sans. I found these sleek and simple san-serif fonts worked well with the theme of the site.
+<br>
+<br>
 
 ### Colour Scheme 
+<hr>
 <br>
 <img src="static/images/adobe.png">
 <br>
@@ -127,12 +129,16 @@ I used Google fonts for the project, with a mix of Fjalla, and Noto Sans. I foun
 <img src="static/images/coolors.png">
 <br>
 <br>
-I kept the colour scheme of the site quite minimal not to distract from the message I wanted to put across. I felt like the darker blue, greys and beige fitted quite well with the photos of coffee farm and nature spread through the site.
+I kept the colour scheme of the site quite minimal not to distract from the message I wanted to put across. I felt like the darker blue, greys and beige fitted quite well with the photos of coffee farms and nature spread through the site.
+<br>
+<br>
 
 ### Images 
+<hr>
 <br>
 
 All images are taken from [Unsplash]("https://unsplash.com/")
+
 <sm>   <a href="https://www.flaticon.com/free-icons/login" title="login icons">Login icons created by Good Ware - Flaticon</a>
 
 Photo by Reiseuhu on Unsplash
@@ -145,14 +151,16 @@ Photo by Helena Lopes on Unsplash
 Photo by Rodrigo Flores on Unsplash)
 
 <a href="https://www.flaticon.com/free-icons/coffee" title="coffee icons">Coffee icons created by Freepik - Flaticon</a>
+<br>
 <a href="https://www.flaticon.com/free-icons/plant" title="plant icons">Plant icons created by Freepik - Flaticon</a>
+<br>
 <a href="https://www.flaticon.com/free-icons/peach" title="peach icons">Peach icons created by Freepik - Flaticon</a>
 
 </sm>
 <br>
-<br>
 
 ### Home Page Carousel
+<hr>
 <br>
 <img src="static/images/carousel.png">
 <br>
@@ -170,8 +178,9 @@ I used bootstrap to add a carousel to the home page, which shows flaticon icons 
 
 ### Manual Testing
 
--Links. I have tested the various nav bar links, and site buttons and they are all functioning correctly
--I have tested the admin portal, added entries to the database and deleted entries:
+- Links. I have tested the various nav bar links, and site buttons and they are all functioning correctly
+- I have tested the admin portal, added entries to the database and deleted entries:
+<br>
 <br>
 <img src="static/images/adminentry.png">
 <br>
@@ -223,7 +232,8 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-kreilly86-c
 ### Responsiveness
 <hr>
 <br>
-Google Developer tools:
+
+- Google Developer tools:
 <br>
 The site has been tested using Google developer tools across all break points with no issues
 <br>
@@ -244,11 +254,30 @@ The site has been tested using Google developer tools across all break points wi
 
 ## Deployment
 <hr>
-<br>
 
 ### Local 
+<hr>
+<br>
+I used Github and Gitpod to build and run this project locally. The repositiory was built using Code Institute's template:
+
+Found [here](https://github.com/Code-Institute-Org/gitpod-full-template)
+
+
+Steps:
+- Click the Use This Template button in the github repository menu
+- Create your own repository name, and description
+- Click the Create Repository from template to create repository
+- Click Gitpod to open the development environment workspace for the new respository
+- Use this workspace each time, rather than repeat above steps, to ensure any installed dependencies are accessible each time
+- Use git to add commit messages and push regularly to keep track of progress:
+
+- git add . (adds all modified files to a staging area) - git commit -m "Insert explanation of commit here": commits all changes to the repository - git push: pushes all committed changes to your Github repository.
+For this project I didn't use the fork or clone option in GitHub, but these are useful tools. If you want to make changes without affecting the code already pushed you can clone the workspac to work on your repository and 'test' out code and changes. On reflection this would have been a useful tool rather than making changes to the original, and sometimes getting a bit lost as to how any changes were made on one sitting.
+<br>
+<br>
 
 ### Heroku Deployment
+<hr>
 <br>
 Steps to Deploy to Heroku:
 <br>
@@ -263,7 +292,7 @@ Click on resources tab in Heroku, and add-ons and select Heroku Postgres
 
 Click Settings tab and select reveal Config Vars
 
-Copy DATABASE_URL value to en.py file, and also create a SECRET_KEY here which is added as a key and value in confing vars on Heroku.
+Copy DATABASE_URL value to env.py file, and also create a SECRET_KEY here which is added as a key and value in confing vars on Heroku.
 
 When ready to deploy under deployment tab
 Select Github as deployment method and type in repository name of project
@@ -271,14 +300,16 @@ Select Github as deployment method and type in repository name of project
 Click search and hit connect on repository name
 
 Next hit deploy branch, and you will see "your app has been deployed", click on link to go to the deployed project
+<hr>
 
 ## Bugs and Errors
 <hr>
 <br>
 <img src="static/images/adminerror.png">
 <br>
+<br>
 When I was building the database structure and creating an admin login superuser, I got an error message when I tried python3 manage.py runserver 
-and typed in /admin/ at the end of the address bar. This was because I started the project Front End and had been using python3 -m http.server to run my project. When I tried to open the admin site I had an error because I hadn't created any views or translated my site into the Django framework yet.
+and typed in /admin/ at the end of the address bar. This was because I started the project Front End first and had been using python3 -m http.server to run my project before any of the Django elements were added. When I tried to open the admin site I had an error because I hadn't created any views or translated my site into the Django framework yet.
 <br>
 <br>
 
@@ -286,12 +317,15 @@ and typed in /admin/ at the end of the address bar. This was because I started t
 <br>
 I found out during my project that db.sqlite3 was being tracked. I have since removed this using command 'git rm -r --cached db.sqlite3'. I also reset my secret key in the local environment and on heroku.
 <br>
+<br>
 
 ### File path names
 <br>
 I had some file paths using incorrect naming conventions for Django:
 <br>
+<br>
 <img src="static/images/incorrectnaming.png">
+<br>
 <br>
 Instead of ../static/images the path should read {% static 'images' %}
 <br>
@@ -299,37 +333,43 @@ Instead of ../static/images the path should read {% static 'images' %}
 
 ### Coffee Card Layout Issues
 <br>
+When I was working on rendering the coffee database entries, I came up against some layout issues. The page was displaying 5 coffee cards on one line even though I had specified only 3 should be in one line on desktop. I set up a forloop counter, so that the cards would show 3 to a line. I accidentally put the closing {% endif %} tag in the wrong position so this didn't work. When I realised this and placed it correctly the code functioned as expected:
 <br>
-When I was working on rendering the coffee database entries, I came up against some layout issues. The page was displaying 5 coffee cards on one line even though I had specified only 3 should be in one line on desktop. I set up a forloop counter, so that the cards would show 3 to a line. I accidentally put the closing {% endif %} tag in thr wrong position so this didn't work. When I realised this and placed it correctly the code functioned as expected:
 <br>
 <img src="static/images/coffees-layout.png">
+<br>
 <br>
 
 ### Flavour Note Icons
 <br>
+I created an if/elif block to run so that when a flavour note appeared in a data entry, a corresponding icon would render in the html of the coffee card. The code ran, but for the coffee notes only one icon would appear, e.g. Peach, Cinnamon, only peach would appear. I realised it was because I was using elif and not ending the if statements. Once I ended each if statement with {% endif %} and began the next one with a new if statement I was able to see both icons appear per coffee.
 <br>
-I created an if/elif block to run so that when a flavour note appeared in a data entry, a corresponding icon would render in the html of the coffee card. The code ran, but out the coffee notes only one icon would appear, e.g. Peach, Cinnamon, only peach would appear. I realised if was because I was using elif and not ending the if statements. Once I ended each if statement with { % endif %} and began the next one with a new if I was able to see both icons appear per coffee.
 <br>
 <img src="static/images/flavour-note-icon-error.png">
+<br>
 <br>
 
 ### Coffee Like Error
 <br>
-<br>
 When I tried to create like functionality to enable users to like a coffee entry, I had an error with the entry:
+<br>
 <br>
 <img src="static/images/coffee-like-error.png">
 <br>
+<br>
 The error was caused by missing code in the Coffee model:
+<br>
 <br>
 <img src="static/images/like-model-error.png">
 <br>
+<br>
 Correct format:
+<br>
 <br>
 <img src="static/images/like-model-correct.png">
 <br>
 <br>
-Once the model was fixed, I was having issues with the Font Awesome heart icons when the user was signed in and added or deleted likes the font awesome icon wasnt showing beside the number of likes. I tried to change different parts of the code, and add CSS styling to the buttons, in the end I had mis-spelled the font awesome icon classes:
+Once the model was fixed, I was having issues with the Font Awesome heart icons. When the user was signed in and added or deleted likes, the font awesome icon wasn't showing beside the number of likes. I tried to change different parts of the code, and add CSS styling to the buttons, in the end I had mis-spelled the font awesome icon classes:
 <br>
 <br>
 <img src="static/images/signed-in-fa-error.png">
@@ -341,8 +381,8 @@ Once the model was fixed, I was having issues with the Font Awesome heart icons 
 
 ### Heroku Static File Error
 <br>
-<br>
 When I first deployed to Heroku none of my static files loaded:
+<br>
 <br>
 <img src="static/images/herokudeploynostatic.png">
 <br>
@@ -353,13 +393,6 @@ I ran the command python3 manage.py collectstatic, and none of my images or css 
 To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on Heroku and added the appropriate paths to settings.py.
 <br>
 <br>
-- The form for a logged in user to add to the coffee database is functional, but it does not generate a slug, which renders the coffees.html with a fault.
-<br> 
-<br>
-<img src="static/images/userentries.png">
-<br>
-<br>
-
 
 ## Credits
 <hr>
