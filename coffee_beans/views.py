@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import View
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Coffee
 from .forms import CoffeeEntry
 
@@ -18,9 +19,9 @@ def join(request):
 
 
 def coffees(request):
-    coffees_list = Coffee.objects.all()
+    coffees_list = Coffee.objects.filter(approved=True)
     context = {
-        'coffees_list': coffees_list,
+        'coffees': coffees_list,
     }
     return render(request, 'coffees.html', context)
 
@@ -29,7 +30,9 @@ class CoffeeLike(View):
 
     def post(self, request, slug, *args, **kwargs):
         coffee = get_object_or_404(Coffee, slug=slug)
+        liked = False
         if coffee.likes.filter(id=request.user.id).exists():
+            liked = True
             coffee.likes.remove(request.user)
         else:
             coffee.likes.add(request.user)
@@ -41,6 +44,8 @@ def coffee_addition(request):
     coffee_entry = CoffeeEntry(data=request.POST)
     if coffee_entry.is_valid():
         coffee_entry.save()
+        messages.success(request, "Thanks for submitting an entry. It is awaiting approval")
+        return redirect(reverse('home'))
     else:
         coffee_entry = CoffeeEntry()
 

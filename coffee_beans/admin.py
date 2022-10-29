@@ -6,7 +6,7 @@ from .models import Coffee
 class CoffeeAdmin(admin.ModelAdmin):
     list_display = ('producer', 'slug', 'region',)
     search_fields = ['producer', 'flavournotes']
-    list_filter = ('producer', 'region', 'variety', 'process', 'approved')
+    list_filter = ('producer', 'region', 'variety', 'process', 'approved',)
     prepopulated_fields = {'slug': ('producer',)}
     actions = ['approve_coffee']
 

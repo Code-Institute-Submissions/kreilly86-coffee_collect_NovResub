@@ -143,20 +143,22 @@
         {% endif %}
     {% endfor %}
     </div>
-
     <div class="row w-100 m-0 p-0 d-flex justify-content-center">
         <div class="col-12 m-3 text-center">
             <h2 class="mb-3">Contribute to Our Database</h2>
-            {% if user.is_authenticated %}
+            {% if request.user.is_authenticated %}
             <form method="POST" class="mb-5">
                 <a class="join-button btn btn-signup m-0" href="{% url 'coffee_addition' %}" type="submit">Add
                     a Coffee</a>
             </form>
             {% else %}
             <div class="text-center">
-                <p class="p-3">Please <a class="p-1" href="{% url 'account_signup' %}">sign-up</a>for an account to add coffees to our datebase</p>
+                <p class="p-3">Please <a class="p-1" href="{% url 'account_signup' %}">sign-up</a>for an account to add
+                    coffees to our database</p>
+                <p class="text-center">Already have an account? Then please <a href="{% url 'account_login' %}">sign
+                        in</a></p>
             </div>
             {% endif %}
         </div>
     </div>
-    {% endblock %}
+{% endblock %}

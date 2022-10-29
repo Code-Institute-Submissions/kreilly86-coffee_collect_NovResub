@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 
 
 class Coffee(models.Model):
@@ -14,6 +15,10 @@ class Coffee(models.Model):
 
     class Meta:
         ordering = ['region']
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.producer)
+        super(Coffee, self).save(*args, **kwargs)
 
     def number_of_likes(self):
         return self.likes.count()

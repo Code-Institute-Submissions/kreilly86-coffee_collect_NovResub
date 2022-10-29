@@ -315,11 +315,11 @@ h2 {
 }
 
 .join-form {
-    padding-bottom: 20px;
-    padding-top: 20px;
-    margin: 0 auto;
-    max-width: 50%; 
-    border: 2px;
+    padding: 25px;
+    margin-bottom: 50px;
+    width: 50vw;
+    border: solid #2B3A67 2px;
+    justify-content: end;
 }
 
 .join-info {
