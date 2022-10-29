@@ -51,6 +51,7 @@ def coffee_addition(request):
         messages.success(request, "Thanks for submitting an entry. It is awaiting approval")
         return redirect(reverse('home'))
     else:
+        messages.error(request, "Submission failed, please try again")
         coffee_entry = CoffeeEntry()
 
     template = 'coffee_addition.html'

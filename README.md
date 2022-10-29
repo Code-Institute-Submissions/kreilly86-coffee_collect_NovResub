@@ -176,9 +176,7 @@ I used bootstrap to add a carousel to the home page, which shows flaticon icons 
 ## Testing
 <hr>
 
-### Manual Testing
-
-- Links. I have tested the various nav bar links, and site buttons and they are all functioning correctly
+- Links - I have tested the various nav bar links, and site buttons and they are all functioning correctly
 - I have tested the admin portal, added entries to the database and deleted entries:
 <br>
 <br>
@@ -198,6 +196,32 @@ I used bootstrap to add a carousel to the home page, which shows flaticon icons 
 <br>
 <br>
 <img src="static/images/login-success.png">
+<br>
+<br>
+
+### Coffee Addition Testing
+<hr>
+I tested adding a coffee to the database after setting up the view code and html framework for signed in users to add an entry. When the coffee entry form was submitted, I received the following error:
+<br>
+<br>
+<img src="static/images/coffee-add-error.png">
+<br>
+<br>
+There was no entry with the same details on the database so I knew the entry was unique.
+<br>
+<br>
+<img src="static/images/test-entry.png">
+<br>
+<br>
+I found a solution here:
+
+[stack overflow](https://stackoverflow.com/questions/50436658/how-to-auto-generate-slug-from-my-album-model-in-django-2-0-4)
+
+<br>
+Once I followed these intructions and imported slugify, the coffee addition function worked correctly. I then added a success message feedback so the user knows they succeeded, and a fail message if the user encounters an issue.
+<br>
+<br>
+<img src="static/images/slugify.png">
 <br>
 <br>
 
@@ -226,7 +250,6 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-kreilly86-c
 <br>
 <br>
 
-<br>
 
 
 ### Responsiveness
@@ -393,6 +416,10 @@ I ran the command python3 manage.py collectstatic, and none of my images or css 
 To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on Heroku and added the appropriate paths to settings.py.
 <br>
 <br>
+
+### Coffee Addition Errors
+<br>
+
 
 ## Credits
 <hr>
