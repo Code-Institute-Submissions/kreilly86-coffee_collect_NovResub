@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <h1 class="coffees">Coffees</h1>
     <div class="row coffee-entries">
-    {% for coffee in coffees %}
+        {% for coffee in coffees %}
         <div class="coffee-card card col-xs-12 col-md-4">
             <img src="{% static 'images/colombia.png' %}" class="card-img-top" alt="photo of empty coffee cup">
             <div class="card-body">
@@ -136,12 +136,20 @@
                 {% endif %}
                 <span class="text-secondary">{{ coffee.number_of_likes }}</span>
             </strong>
+            <div>
+                <span class="update-coffee"><a href="/edit/{{ coffee.slug }}" class="btn btn-outline-secondary">
+                        Edit
+                    </a></span>
+                <span class="update-coffee"><a href="/delete/{{ coffee.slug }}" class="btn btn-outline-danger">
+                        Delete
+                    </a></span>
+            </div>
         </div>
         {% if forloop.counter|divisibleby:3 %}
     </div>
     <div class="row coffee-entries">
         {% endif %}
-    {% endfor %}
+        {% endfor %}
     </div>
     <div class="row w-100 m-0 p-0 d-flex justify-content-center">
         <div class="col-12 m-3 text-center">
@@ -161,4 +169,4 @@
             {% endif %}
         </div>
     </div>
-{% endblock %}
+    {% endblock %}

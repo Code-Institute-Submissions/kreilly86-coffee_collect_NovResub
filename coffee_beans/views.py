@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Coffee
 from .forms import CoffeeEntry
 
@@ -49,9 +50,8 @@ def coffee_addition(request):
     if coffee_entry.is_valid():
         coffee_entry.save()
         messages.success(request, "Thanks for submitting an entry. It is awaiting approval")
-        return redirect(reverse('home'))
+        return redirect(reverse('coffees'))
     else:
-        messages.error(request, "Submission failed, please try again")
         coffee_entry = CoffeeEntry()
 
     template = 'coffee_addition.html'
@@ -60,3 +60,33 @@ def coffee_addition(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def edit_coffee(request, slug):
+    coffee = get_object_or_404(Coffee, slug=slug)
+    if request.method == 'POST':
+        coffee_entry = CoffeeEntry(request.POST, instance=coffee)
+        if coffee_entry.is_valid():
+            coffee_entry.save()
+            messages.success(request, "Your entry has been updated")
+            return redirect('coffees')
+    coffee_entry = CoffeeEntry(instance=coffee)
+    context = {
+        "coffee_entry": coffee_entry
+    }
+    return render(request, 'edit_coffee.html', context)
+
+
+def delete_coffee(request, slug):
+    """Delete Coffee Entry From Database"""
+    if request.user.is_authenticated:
+        coffee = get_object_or_404(Coffee, slug=slug)
+        coffee.delete()
+        messages.success(request, "Your entry has been deleted")  
+    else:
+        messages.warning(request,"You are not authorised to delete entries")
+
+    return redirect('coffees')
+
+

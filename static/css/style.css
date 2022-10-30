@@ -232,12 +232,23 @@ h2 {
     border: none;
     color:#2B3A67;
     background-color: white;
+    margin-bottom: 5px;
 }
 
 .btn-like:hover,
 .btn-like:active {
     color: #496A81;
     border: none;
+}
+
+.update-coffee a {
+    text-decoration: none;
+    color:#2B3A67;
+    margin: 5px;
+}
+
+.update-coffee a:hover {
+    color:white !important;
 }
 
 /* About Us */

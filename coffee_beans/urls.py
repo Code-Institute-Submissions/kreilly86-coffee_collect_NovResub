@@ -8,4 +8,6 @@ urlpatterns = [
     path('coffees/', views.coffees, name='coffees'),
     path('coffee_addition/', views.coffee_addition, name='coffee_addition'),
     path('like/<slug:slug>', views.CoffeeLike.as_view(), name='coffee_like'),
+    path('edit/<slug:slug>', views.edit_coffee, name='edit'),
+    path('delete/<slug:slug>', views.delete_coffee, name='delete'),
 ]
