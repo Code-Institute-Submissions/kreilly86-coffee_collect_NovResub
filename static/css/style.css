@@ -323,8 +323,7 @@ h2 {
 }
 
 .join-info {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px;
     margin: 0 auto;
     max-width: 50%; 
     display: flex;
@@ -340,7 +339,7 @@ h2 {
     border-color: #B3AF8F;
     color: white;
     padding: 5px;
-    margin: 0 auto;
+    margin-top: 10px;
     justify-content: center;
 }
 
