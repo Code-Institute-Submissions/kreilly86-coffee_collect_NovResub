@@ -9,19 +9,19 @@
 
 {% block content %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-8 mt-3 offset-md-2 mx-auto">
 
       <h2>{% trans "Sign In" %}</h2>
 
-      <p>{% blocktrans %}Welcome to Coffee Collect. To add a coffee to our database or like a coffee, please log
+      <p class="login">{% blocktrans %}Welcome to Coffee Collect. To add a coffee to our database or like a coffee, please log
         in. If you
         have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
         first.{% endblocktrans %}</p>
     </div>
   </div>
-</div>
+
 
 <div class="row">
   <div class="col-md-8 mt-3 offset-md-2 mb-3 justify-content-center">
@@ -34,6 +34,7 @@
         <button class="join-button btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
     </form>
   </div>
+</div>
 </div>
 
 {%endblock%}

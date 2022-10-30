@@ -156,8 +156,7 @@ h2 {
 
 .carousel-inner {
     height: auto;
-    align-content: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .carousel-item .active {
@@ -314,10 +313,14 @@ h2 {
     width: 100vw;  
 }
 
+.btn-signup {
+    text-align: center;
+}
+
 .join-form {
     padding: 25px;
     margin-bottom: 50px;
-    width: 50vw;
+    width: 60vw;
     border: solid #2B3A67 2px;
     justify-content: end;
 }
@@ -327,12 +330,12 @@ h2 {
     margin: 0 auto;
     max-width: 50%; 
     display: flex;
+    justify-content: center;
 }
 
 .join-form li {
     list-style: none;
 }
-
 
 .join-button {
     background-color: #2B3A67;
@@ -584,6 +587,7 @@ h2 {
         justify-content: center !important;
         display: flex;
     }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -655,6 +659,7 @@ h2 {
         justify-content: center;
         padding: 20px;
         margin-bottom: 25px;
+        font-size: 12px;
     }
 
     .social-links li {
@@ -662,6 +667,14 @@ h2 {
         align-items: center;
         line-height: 0%;
         height: auto;
+    }
+
+    .join-form {
+        width: 75vw;
+    }
+
+    .login {
+        margin: 25px;
     }
 }
 
@@ -674,6 +687,10 @@ h2 {
         padding: 25px;
         justify-content: center !important;
         display: flex;
+    }
+
+    .join-form {
+        width: 65vw;
     }
 
 }
