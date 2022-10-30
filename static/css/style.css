@@ -311,8 +311,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
-    width: 100vw;
-    
+    width: 100vw;  
 }
 
 .join-form {
@@ -551,6 +550,16 @@ h2 {
         width: 100vw;
     }
 
+    .card {
+        width: 80vw;
+        text-align: center;
+    }
+
+    .card-img-top {
+        transform: scale(0.8);
+        margin: 0px;
+    }
+
     .social-links {
         justify-content: center;
         padding: 20px;
@@ -576,9 +585,7 @@ h2 {
         justify-content: center !important;
         display: flex;
     }
-
 }
-
 
 @media only screen and (max-width: 768px) {
     
@@ -588,6 +595,20 @@ h2 {
         height: fit-content;
         width: 100vw;
         flex-direction: column;
+    }
+
+    .card {
+        width: 80vw;
+        text-align: center;
+    }
+
+    .card-text {
+        font-size: 18px !important;
+    }
+
+    .card-img-top {
+        transform: scale(0.8);
+        margin: 0px;
     }
 
     .account-status {
@@ -643,4 +664,17 @@ h2 {
         line-height: 0%;
         height: auto;
     }
+}
+
+@media only screen and (max-width: 992px) {
+    .card-text {
+        font-size: 14px;
+    }
+
+    .account-status {
+        padding: 25px;
+        justify-content: center !important;
+        display: flex;
+    }
+
 }
