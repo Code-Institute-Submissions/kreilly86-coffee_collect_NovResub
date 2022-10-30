@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% load static %}
+
+<h1 class="coffees">Edit Coffee</h1>
+
+<div class="container-fluid">
+    <!--New Database Entries here-->
+    <div class="row text-center">
+        <div class="col-12 mb-5">
+            <p class="lead">Edit Form Below</p>
+        </div>
+        <div class="col">
+        {% if user.is_authenticated %}
+            <form method="POST" class="coffee-form mx-auto mb-2">
+            {% csrf_token %}
+            {{ coffee_entry | crispy }}
+            <button type="submit" class="join-button btn btn-signup btn-lg mt-5">Update Entry</button>
+            </form>
+        {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
