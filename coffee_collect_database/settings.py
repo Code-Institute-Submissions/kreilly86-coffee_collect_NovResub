@@ -18,7 +18,6 @@ from django.contrib.messages import constants as messages
 if os.path.isfile("env.py"):
     import env
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
@@ -28,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['coffee-collect.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://kreilly86-coffeecollect-onoo05mp3mj.ws-eu72.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://kreilly86-coffeecollect-onoo05mp3mj.ws-eu73.gitpod.io']
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
