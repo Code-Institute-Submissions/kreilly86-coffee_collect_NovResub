@@ -8,18 +8,22 @@ from .forms import CoffeeEntry
 
 
 def home(request):
+    """A view to return the index page"""
     return render(request, 'index.html')
 
 
 def about(request):
+    """A view to return the about page"""
     return render(request, 'about.html')
 
 
 def contribute(request):
+    """A view to return the contribute page"""
     return render(request, 'contribute.html')
 
 
 def coffees(request):
+    """A view to display Coffee Entries"""
     coffees_list = Coffee.objects.filter(approved=True)
     context = {
         'coffees': coffees_list,
@@ -28,7 +32,8 @@ def coffees(request):
 
 
 class CoffeeLike(View):
-
+    """A view to enable users to Like/Unlike coffee
+    entries"""
     def post(self, request, slug, *args, **kwargs):
         coffee = get_object_or_404(Coffee, slug=slug)
         liked = False
@@ -46,6 +51,7 @@ class CoffeeLike(View):
 
 
 def coffee_addition(request):
+    """A view to add Coffees to the Database"""
     coffee_entry = CoffeeEntry(data=request.POST)
     if coffee_entry.is_valid():
         coffee_entry.save()
@@ -64,6 +70,7 @@ def coffee_addition(request):
 
 @login_required
 def edit_coffee(request, slug):
+    """A view to Edit Coffee Entries"""
     coffee = get_object_or_404(Coffee, slug=slug)
     if request.method == 'POST':
         coffee_entry = CoffeeEntry(request.POST, instance=coffee)
@@ -79,7 +86,7 @@ def edit_coffee(request, slug):
 
 
 def delete_coffee(request, slug):
-    """Delete Coffee Entry From Database"""
+    """A view to Delete Coffee Entry From Database"""
     if request.user.is_authenticated:
         coffee = get_object_or_404(Coffee, slug=slug)
         coffee.delete()
