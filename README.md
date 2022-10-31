@@ -18,13 +18,17 @@
   * [Bugs and Errors](#bugs-and-errors)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+<br>
+<hr>
 
 # Coffee Collect
 
 ## UX:
 <hr>
-
+<br>
 <img src="static/images/mainimage.png">
+<br>
+<hr>
 
 ### Site Owner's Goals:
 <hr>
@@ -62,16 +66,23 @@ I have created wireframes for various screen sizes.
 - [Tablet View](wireframes/CoffeeCollect-tablet.pdf)
 <br>
 <br>
+<hr>
 
-## Agile Model Planning
+### Agile Model Planning
 <hr>
 <br>
+I used Githubs 
 
-I used Githubs [Kanban style project board](https://github.com/users/kreilly86/projects/3) to create user stories and categorise each story as either:
-    -Must Have
-    -Should Have
-    -Could Have
+[Kanban style project board](https://github.com/users/kreilly86/projects/3) 
+
+to create user stories and categorise each story as either:
+
+- Must Have
+- Should Have
+- Could Have
 <br>
+<br>
+<hr>
 
 ## Features
 <hr>
@@ -82,7 +93,7 @@ I used Githubs [Kanban style project board](https://github.com/users/kreilly86/p
 <img src="static/images/navbar.png">
 <br>
 <br>
-The navigation bar was made with bootstrap, it consists of the home page, link to coffees page,which shows the datbase entries displayed as cards. It also links to an about page, and a contribute page with further information about contributing to the database. 
+The navigation bar was made with bootstrap, it consists of links to the home page, coffees page, about page and contribute page. The coffees page shows the datbase entries displayed as cards. The about page gives a brief description of the project, and the contribute page gives further information about contributing to the database and links to sign-up for an account, or add a coffee if already signed in.
 <br>
 <br>
 I have used a font awesome user icon to the right on the navbar which drops down for users to sign-in if not already, or sign-out if already signed in.
@@ -93,16 +104,18 @@ The menu disappears on smaller devices but has an easy to use hamburger style me
 <img src="static/images/navbarmobile.png">
 <br>
 <br>
+<hr>
 
-## Responsiveness
+### Responsiveness
 <hr>
 <br>
 All pages work on mobile, tablet and larger screen sizes.
-
 <img src="static/images/coffeesresponsive.png">
 <br>
 <br>
 <img src="static/images/sign-inresponsive.png">
+<br>
+<hr>
 
 ### Coffee Collect Logo
 <hr>
@@ -113,12 +126,14 @@ All pages work on mobile, tablet and larger screen sizes.
 I created the Coffee Collect logo using canva. I was looking for a minimalistic design, which highlights the coffee plant, reminding us that the coffee we consume is from a plant, and a lot of work goes into cultivating it.
 <br>
 <br>
+<hr>
 
 ### Fonts
 <hr>
 I used Google fonts for the project, with a mix of Fjalla, and Noto Sans. I found these sleek and simple san-serif fonts worked well with the theme of the site.
 <br>
 <br>
+<hr>
 
 ### Colour Scheme 
 <hr>
@@ -132,6 +147,7 @@ I used Google fonts for the project, with a mix of Fjalla, and Noto Sans. I foun
 I kept the colour scheme of the site quite minimal not to distract from the message I wanted to put across. I felt like the darker blue, greys and beige fitted quite well with the photos of coffee farms and nature spread through the site.
 <br>
 <br>
+<hr>
 
 ### Images 
 <hr>
@@ -158,6 +174,7 @@ Photo by Rodrigo Flores on Unsplash)
 
 </sm>
 <br>
+<hr>
 
 ### Home Page Carousel
 <hr>
@@ -168,12 +185,20 @@ Photo by Rodrigo Flores on Unsplash)
 I used bootstrap to add a carousel to the home page, which shows flaticon icons to the left. The carousel describes what the site is collecting : Producer/region, processes/variety, and flavour notes of coffees.
 <br> 
 <br>
+<hr>
 
 ## Features to be Implemented
 <hr>
 
+- A blog with featured coffee producers, their farm and infomration about the location. The blog could also share further details about coffee varieties and processes.
+<br>
 
+- Search functionality so users can search for entries by flavour notes, region, process, variety etc
+<br>
 
+- A comment form linked to entries for users to write further details about each coffee entry
+<br>
+<hr>
 
 ## Testing
 <hr>
@@ -200,6 +225,7 @@ I used bootstrap to add a carousel to the home page, which shows flaticon icons 
 <img src="static/images/login-success.png">
 <br>
 <br>
+<hr>
 
 ### Coffee Addition Testing
 <hr>
@@ -220,12 +246,67 @@ I found a solution here:
 [stack overflow](https://stackoverflow.com/questions/50436658/how-to-auto-generate-slug-from-my-album-model-in-django-2-0-4)
 
 <br>
-Once I followed these intructions and imported slugify, the coffee addition function worked correctly. I then added a success message feedback so the user knows they succeeded, and a fail message if the user encounters an issue.
+Once I followed these intructions and imported slugify, the coffee addition function worked correctly. I then added a success message feedback so the users knows their entry has been accepte and awaiting approval.
 <br>
 <br>
 <img src="static/images/slugify.png">
 <br>
 <br>
+<img src="static/images/coffee-add-authorise.png">
+<br>
+<br>
+<hr>
+
+### Coffee Like/Unlike Test
+<hr>
+I have tested the like/unlike functionality of the coffee entries. When a user is not signed in they are unable to add a like. Once a user signs in they can like and unlike a coffee entry:
+<br>
+<br>
+<img src="static/images/like-test.png">
+<br>
+<br>
+<img src="static/images/unlike-test.png">
+<br>
+<br>
+<hr>
+
+### Coffee Edit
+<hr>
+I have tested the coffee edit functionality. If a user is not signed in they are directed to the sign-in page when they try to edit an entry. If a user is signed in they are taken to the edit coffee view:
+<br>
+<br>
+<img src="static/images/edit-coffee.png">
+<br>
+<br>
+Once the user has submitted their changes to the entry they are returned to the coffees page and a success message is displayed:
+<br>
+<br>
+<img src="static/images/updated-entry.png">
+<br>
+<br>
+<hr>
+
+### Coffee Delete
+<hr>
+I have tested the delete coffee functionalilty. If a user is not signed in they are shown a warning message:
+<br>
+<br>
+<img src="static/images/unauthorised-delete.png">
+<br>
+<br>
+When a user is signed in they can delete an entry:
+<br>
+<br>
+<img src="static/images/delete-coffee.png">
+<br>
+<br>
+When the entry is deleted, the user has a message displayed confirming the deletion:
+<br>
+<br>
+<img src="static/images/entry-delete.png">
+<br>
+<br>
+<hr>
 
 ### Validators
 <hr>
@@ -243,16 +324,17 @@ Site passed validation
 <br>
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-kreilly86-coffeecollect-5rcf6ubskpv.ws-eu47.gitpod.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 <br>
+<br>
 
 - Lighthouse in google dev tools
 <br>
+<br>
 <img src="static/images/lighthouse.png">
+<br>
 <br>
 - PEP8 Python
 <br>
 <br>
-
-
 
 ### Responsiveness
 <hr>
@@ -263,8 +345,9 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-kreilly86-c
 The site has been tested using Google developer tools across all break points with no issues
 <br>
 <br>
+<hr>
 
-## Languages, Frameworks and Libraries used
+### Languages, Frameworks and Libraries used
 <hr>
 <br>
 
@@ -276,6 +359,7 @@ The site has been tested using Google developer tools across all break points wi
 - SQLite - Was used to run the project localy
 - Cloudinary - Used to host static files
 - PostgreSQL - Heroku's PostgreSQL was used to store data of the deployed site
+<hr>
 
 ## Deployment
 <hr>
@@ -306,25 +390,26 @@ For this project I didn't use the fork or clone option in GitHub, but these are 
 <br>
 Steps to Deploy to Heroku:
 <br>
-Sign into Heroku account and select create new app.
 
-Choose app name and select Europe region, click create app
+- Sign into Heroku account and select create new app.
 
-In local environment create a Procfile with the following:
+- Choose app name and select Europe region, click create app
+
+- In local environment create a Procfile with the following:
 web: gunicorn *project name here *_database.wsgi 
 
-Click on resources tab in Heroku, and add-ons and select Heroku Postgres
+- Click on resources tab in Heroku, and add-ons and select Heroku Postgres
 
-Click Settings tab and select reveal Config Vars
+- Click Settings tab and select reveal Config Vars
 
-Copy DATABASE_URL value to env.py file, and also create a SECRET_KEY here which is added as a key and value in confing vars on Heroku.
+- Copy DATABASE_URL value to env.py file, and also create a SECRET_KEY here which is added as a key and value in confing vars on Heroku.
 
-When ready to deploy under deployment tab
+- When ready to deploy under deployment tab
 Select Github as deployment method and type in repository name of project
 
-Click search and hit connect on repository name
+- Click search and hit connect on repository name
 
-Next hit deploy branch, and you will see "your app has been deployed", click on link to go to the deployed project
+- Next hit deploy branch, and you will see "your app has been deployed", click on link to go to the deployed project
 <hr>
 
 ## Bugs and Errors
@@ -337,14 +422,18 @@ When I was building the database structure and creating an admin login superuser
 and typed in /admin/ at the end of the address bar. This was because I started the project Front End first and had been using python3 -m http.server to run my project before any of the Django elements were added. When I tried to open the admin site I had an error because I hadn't created any views or translated my site into the Django framework yet.
 <br>
 <br>
+<hr>
 
 ### db.sqlite3
+<hr>
 <br>
 I found out during my project that db.sqlite3 was being tracked. I have since removed this using command 'git rm -r --cached db.sqlite3'. I also reset my secret key in the local environment and on heroku.
 <br>
 <br>
+<hr>
 
 ### File path names
+<hr>
 <br>
 I had some file paths using incorrect naming conventions for Django:
 <br>
@@ -355,8 +444,10 @@ I had some file paths using incorrect naming conventions for Django:
 Instead of ../static/images the path should read {% static 'images' %}
 <br>
 <br>
+<hr>
 
 ### Coffee Card Layout Issues
+<hr>
 <br>
 When I was working on rendering the coffee database entries, I came up against some layout issues. The page was displaying 5 coffee cards on one line even though I had specified only 3 should be in one line on desktop. I set up a forloop counter, so that the cards would show 3 to a line. I accidentally put the closing {% endif %} tag in the wrong position so this didn't work. When I realised this and placed it correctly the code functioned as expected:
 <br>
@@ -364,8 +455,10 @@ When I was working on rendering the coffee database entries, I came up against s
 <img src="static/images/coffees-layout.png">
 <br>
 <br>
+<hr>
 
 ### Flavour Note Icons
+<hr>
 <br>
 I created an if/elif block to run so that when a flavour note appeared in a data entry, a corresponding icon would render in the html of the coffee card. The code ran, but for the coffee notes only one icon would appear, e.g. Peach, Cinnamon, only peach would appear. I realised it was because I was using elif and not ending the if statements. Once I ended each if statement with {% endif %} and began the next one with a new if statement I was able to see both icons appear per coffee.
 <br>
@@ -373,8 +466,10 @@ I created an if/elif block to run so that when a flavour note appeared in a data
 <img src="static/images/flavour-note-icon-error.png">
 <br>
 <br>
+<hr>
 
-### Coffee Like Error
+### Coffee Like error
+<hr>
 <br>
 When I tried to create like functionality to enable users to like a coffee entry, I had an error with the entry:
 <br>
@@ -403,8 +498,10 @@ Once the model was fixed, I was having issues with the Font Awesome heart icons.
 <img src="static/images/font-awesome-error.png">
 <br>
 <br>
+<hr>
 
 ### Heroku Static File Error
+<hr>
 <br>
 When I first deployed to Heroku none of my static files loaded:
 <br>
@@ -418,10 +515,7 @@ I ran the command python3 manage.py collectstatic, and none of my images or css 
 To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on Heroku and added the appropriate paths to settings.py.
 <br>
 <br>
-
-### Coffee Addition Errors
-<br>
-
+<hr>
 
 ## Credits
 <hr>
@@ -432,7 +526,8 @@ To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on 
 - Stack Overflow
 - Code Institute's Slack channel 
 <br>
-
+<br>
+<hr>
 
 ## Code
 <hr>
@@ -441,4 +536,3 @@ To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on 
 - Bootstrap was used for the navbar, contact form, home page carousel and scattered through the site for layout tweaking.
 - Stack overflow
 - The Code Institute Django blog walkthrough 
-
