@@ -347,7 +347,7 @@ The site has been tested using Google developer tools across all break points wi
 <br>
 <hr>
 
-### Languages, Frameworks and Libraries used
+### Languages, Frameworks and Libraries Used
 <hr>
 <br>
 
@@ -432,7 +432,7 @@ I found out during my project that db.sqlite3 was being tracked. I have since re
 <br>
 <hr>
 
-### File path names
+### File Path Names
 <hr>
 <br>
 I had some file paths using incorrect naming conventions for Django:
@@ -468,7 +468,7 @@ I created an if/elif block to run so that when a flavour note appeared in a data
 <br>
 <hr>
 
-### Coffee Like error
+### Coffee Like Error
 <hr>
 <br>
 When I tried to create like functionality to enable users to like a coffee entry, I had an error with the entry:
