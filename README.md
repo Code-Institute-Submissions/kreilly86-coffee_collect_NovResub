@@ -110,6 +110,8 @@ The menu disappears on smaller devices but has an easy to use hamburger style me
 <hr>
 <br>
 All pages work on mobile, tablet and larger screen sizes.
+<br>
+<br>
 <img src="static/images/coffeesresponsive.png">
 <br>
 <br>
