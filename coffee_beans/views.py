@@ -83,10 +83,8 @@ def delete_coffee(request, slug):
     if request.user.is_authenticated:
         coffee = get_object_or_404(Coffee, slug=slug)
         coffee.delete()
-        messages.success(request, "Your entry has been deleted")  
+        messages.success(request, "Your entry has been deleted")
     else:
-        messages.warning(request,"You are not authorised to delete entries")
+        messages.warning(request, "You are not authorised to delete entries")
 
     return redirect('coffees')
-
-
