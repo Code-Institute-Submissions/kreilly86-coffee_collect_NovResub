@@ -12,9 +12,14 @@ class Coffee(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
     likes = models.ManyToManyField(User, related_name='likes', blank=True)
     approved = models.BooleanField(default=False)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, 
+        related_name='user')
 
     class Meta:
         ordering = ['region']
+
+    def __str__(self):
+        return self.user
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.producer)

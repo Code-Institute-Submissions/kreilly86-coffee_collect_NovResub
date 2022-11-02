@@ -137,13 +137,16 @@
                 <span class="text-secondary">{{ coffee.number_of_likes }}</span>
             </strong>
             <div>
+                {{ coffee.user }}
                 {% if user.is_authenticated %}
+                    {% if user.id == coffee.user %}
                 <span class="update-coffee"><a href="/edit/{{ coffee.slug }}" class="btn btn-outline-secondary">
                         Edit
                     </a></span>
                 <span class="update-coffee"><a href="/delete/{{ coffee.slug }}" class="btn btn-outline-danger">
                         Delete
                     </a></span>
+                    {% endif %}
                 {% endif %}
             </div>
         </div>
