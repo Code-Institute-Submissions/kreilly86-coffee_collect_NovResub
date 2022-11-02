@@ -12,13 +12,17 @@
         <div class="col-12 mb-5">
             <p class="lead">Edit Entry Below</p>
         </div>
-        <div class="col">
+        <div class="col-12">
         {% if user.is_authenticated %}
             <form method="POST" class="coffee-form mx-auto mb-2">
             {% csrf_token %}
             {{ coffee_entry | crispy }}
             <button type="submit" class="join-button btn btn-signup btn-lg mt-5">Update Entry</button>
             </form>
+        {% else %}
+            <div class="alert alert-warning m-3" role="alert">
+                You are not authorised to edit this coffee!
+            </div>
         {% endif %}
         </div>
     </div>

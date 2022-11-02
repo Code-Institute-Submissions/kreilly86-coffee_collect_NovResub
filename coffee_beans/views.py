@@ -54,6 +54,8 @@ def coffee_addition(request):
     """A view to add Coffees to the Database"""
     coffee_entry = CoffeeEntry(data=request.POST)
     if coffee_entry.is_valid():
+        coffee_entry = coffee_entry.save(commit=False)
+        coffee_entry.user = request.user
         coffee_entry.save()
         messages.success(request, "Thanks for submitting an entry. It is awaiting approval")
         return redirect(reverse('coffees'))
@@ -75,6 +77,8 @@ def edit_coffee(request, slug):
     if request.method == 'POST':
         coffee_entry = CoffeeEntry(request.POST, instance=coffee)
         if coffee_entry.is_valid():
+            coffee_entry = coffee_entry.save(commit=False)
+            coffee_entry.user = request.user
             coffee_entry.save()
             messages.success(request, "Your entry has been updated")
             return redirect('coffees')
