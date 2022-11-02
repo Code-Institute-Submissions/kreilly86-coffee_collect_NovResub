@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['coffee-collect.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://*.*.gitpod.io/', 'localhost', 'coffee-collect.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://*.*.gitpod.io/', 'localhost']
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
