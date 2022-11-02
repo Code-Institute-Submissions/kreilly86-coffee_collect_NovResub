@@ -12,7 +12,7 @@ class Coffee(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
     likes = models.ManyToManyField(User, related_name='likes', blank=True)
     approved = models.BooleanField(default=False)
-    user = models.OneToOneField(User, on_delete=models.CASCADE,
+    user = models.ForeignKey(User, on_delete=models.CASCADE,
         related_name='user')
 
     class Meta:

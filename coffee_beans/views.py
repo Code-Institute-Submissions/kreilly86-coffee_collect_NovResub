@@ -82,6 +82,9 @@ def edit_coffee(request, slug):
             coffee_entry.save()
             messages.success(request, "Your entry has been updated")
             return redirect('coffees')
+        else:
+            messages.warning(request, "You are not authorised to edit this entry")
+
     coffee_entry = CoffeeEntry(instance=coffee)
     context = {
         "coffee_entry": coffee_entry
