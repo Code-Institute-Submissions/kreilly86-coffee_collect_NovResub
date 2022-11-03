@@ -310,6 +310,38 @@ When the entry is deleted, the user has a message displayed confirming the delet
 <br>
 <hr>
 
+### User Edit/Delete Coffee Entries
+
+When I tested the edit/delete functionality for editing/deleting coffee entries, the edit and delete functions worked correctly. If a user is authenticated, they can change or delete an entry. This was problematic though as any authenticated user could edit or delete any coffee entries, even ones that weren’t their own. 
+<br>
+I tried to add a new variable to the Coffee Model:
+user= models.ForeignKey(User, on_delete=models.CASCADE, related name=’user’)
+This did not work as there were already entries in the database with no default to fill the new user data in the database. I then tried deleting all database entries, but this did not work either.
+<br>
+<br>
+<img src="static/images/model-error.png">
+<br>
+<br>
+<img src="static/images/integrity-error.png">
+<br>
+<br>
+Finally, I deleted all migrations and files, apart from the __init__.py in the migrations folder. I then ran migrations again:
+<br>
+-	python3 manage.py makemigrations
+-	python3 manage.py migrate
+<br> 
+This set up the database again with the new user variable. I needed to do this in order to create functionality for a signed in user to ONLY have permission to edit or delete their own entries and not other people’s entries.
+<br>
+This means that a signed in user will only see Edit/Delete buttons on coffee entries they have submitted, the rest won’t contain these buttons. Below is an example of admin signed in, with one entry coming from the admin, and the other a registered user:
+<br>
+<br>
+<img src="static/images/authenticated-user-view.png">
+<br>
+<br>
+<img src="static/images/entry-owner-view.png">
+<br>
+<br>
+
 ### Validators
 <hr>
 <br>
@@ -522,8 +554,7 @@ To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on 
 ## Credits
 <hr>
 <br>
-
-- Credit to my mentor Simon Dehlin for advice, motivation and helping for my Milestone Project 4 idea.
+- Credit to my mentor Simen Dehlin for advice, motivation and helping for my Milestone Project 4 idea.
 - Code Insitute tutorials and tutor support
 - Stack Overflow
 - Code Institute's Slack channel 
@@ -538,3 +569,4 @@ To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on 
 - Bootstrap was used for the navbar, contact form, home page carousel and scattered through the site for layout tweaking.
 - Stack overflow
 - The Code Institute Django blog walkthrough 
+- https://www.youtube.com/watch?v=Y1Us5jVT07E tutorial on authenticated users editing/deleting entries
