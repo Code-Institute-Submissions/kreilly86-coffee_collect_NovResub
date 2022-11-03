@@ -99,6 +99,14 @@ h2 {
     color: #496A81;
 }
 
+#sign-up {
+    color: #2B3A67;
+}
+
+#sign-up:hover {
+    color: #2B3A67;
+}
+
 /* Home page */
 
 .homepage-collecting {
