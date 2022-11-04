@@ -356,7 +356,7 @@ Site passed validation
 - WSC CSS validator
 <br>
 <br>
-
+<img src="static/images/style.css-validation.png">
 <br>
 <br>
 
@@ -367,7 +367,10 @@ Site passed validation
 <br>
 <br>
 
-- PEP8 Python
+- Flake 8
+<br>
+<br>
+I have ran flake8 in the terminal with no major issues found
 <br>
 <br>
 
