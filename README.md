@@ -356,7 +356,7 @@ Site passed validation
 - WSC CSS validator
 <br>
 <br>
-https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-kreilly86-coffeecollect-5rcf6ubskpv.ws-eu47.gitpod.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+
 <br>
 <br>
 
