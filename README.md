@@ -366,6 +366,7 @@ Site passed validation
 <img src="static/images/lighthouse.png">
 <br>
 <br>
+
 - PEP8 Python
 <br>
 <br>
@@ -420,6 +421,7 @@ Steps:
 - Click the Create Repository from template to create repository
 - Click Gitpod to open the development environment workspace for the new respository
 - Use this workspace each time, rather than repeat above steps, to ensure any installed dependencies are accessible each time
+- Create an env.py file to store sensitive information, such as SECRET_KEY, DATABASE_URL, etc
 - Use git to add commit messages and push regularly to keep track of progress:
 
 - git add . (adds all modified files to a staging area) - git commit -m "Insert explanation of commit here": commits all changes to the repository - git push: pushes all committed changes to your Github repository.
@@ -442,7 +444,7 @@ web: gunicorn *project name here *_database.wsgi
 
 - Click on resources tab in Heroku, and add-ons and select Heroku Postgres
 
-- Click Settings tab and select reveal Config Vars
+- Click Settings tab and select reveal Config Vars which will show the DATABASE_URL
 
 - Copy DATABASE_URL value to env.py file, and also create a SECRET_KEY here which is added as a key and value in confing vars on Heroku.
 
