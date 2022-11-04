@@ -30,6 +30,8 @@
 <br>
 <hr>
 
+[Deployed site](https://coffee-collect.herokuapp.com/)
+
 ### Site Owner's Goals:
 <hr>
 
