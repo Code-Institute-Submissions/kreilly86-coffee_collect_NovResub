@@ -311,7 +311,7 @@ When the entry is deleted, the user has a message displayed confirming the delet
 <hr>
 
 ### User Edit/Delete Coffee Entries
-
+<hr>
 When I tested the edit/delete functionality for editing/deleting coffee entries, the edit and delete functions worked correctly. If a user is authenticated, they can change or delete an entry. This was problematic though as any authenticated user could edit or delete any coffee entries, even ones that weren’t their own. 
 <br>
 I tried to add a new variable to the Coffee Model:
@@ -385,14 +385,22 @@ The site has been tested using Google developer tools across all break points wi
 <hr>
 <br>
 
-- Python - This project uses Python as its' core language
-- Django - This project is built with the Django framework
-- Bootstrap - Bootstrap is used throughout the site to add style, and responsiveness to the site
-- Font Awesome - Used for like symbols
-- Flaticon - Used to make icons for the coffee card flavour notes
-- SQLite - Was used to run the project localy
-- Cloudinary - Used to host static files
-- PostgreSQL - Heroku's PostgreSQL was used to store data of the deployed site
+- [Python](https://www.python.org/) - This project uses Python as its' core language
+
+- [Django](https://www.djangoproject.com/) - This project is built with the Django framework
+
+- [Bootstrap](https://getbootstrap.com/) - Bootstrap is used throughout the site to add style, and responsiveness to the site
+
+- [Font Awesome](https://fontawesome.com/) - Used for like symbols
+
+- [Flaticon](https://www.flaticon.com/) - Used to make icons for the coffee card flavour notes
+
+- [SQLite](https://www.sqlite.org/index.html) - Was used to run the project locally
+
+- [Cloudinary](https://cloudinary.com/) - Used to host static files
+
+- [PostgreSQL](https://www.postgresql.org/) - Heroku's PostgreSQL was used to store data of the deployed site
+
 <hr>
 
 ## Deployment
@@ -554,6 +562,7 @@ To fix this I installed Cloudinary, set up Cloudinary URL in the Convig Vars on 
 ## Credits
 <hr>
 <br>
+
 - Credit to my mentor Simen Dehlin for advice, motivation and helping for my Milestone Project 4 idea.
 - Code Insitute tutorials and tutor support
 - Stack Overflow

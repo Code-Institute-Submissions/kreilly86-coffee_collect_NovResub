@@ -27,7 +27,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['coffee-collect.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://*.*.gitpod.io/', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['https://*.*.gitpod.io/', 'localhost', 'coffee-collect.herokuapp.com']
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
